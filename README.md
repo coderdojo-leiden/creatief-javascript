@@ -11,9 +11,8 @@
 
 ### Geavanceerd
 
-- [Twisty Trees](./twisty-trees)
-  Een boom tekenen 
-- 
+- [Twisty Trees](./twisty-trees/)<br>
+  Bomen tekenen door takken telkens verder te splitsen.
 
 ## Leertraject
 
@@ -31,6 +30,6 @@
 
 ### Geavanceerd
 
-- [Twisty Trees](./twisty-trees)
+- [Twisty Trees](./twisty-trees/)
   - Recursie
-  - Fractals
+  - Fractals (boom van Pythagoras)

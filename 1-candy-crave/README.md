@@ -1,4 +1,4 @@
-# Creatief Coderen in JavaScript: 1 - Candy Capture
+# Candy Capture (Creatief Coderen in JavaScript)
 
 JavaScript is een programmeertaal die vooral door websites gebruikt wordt. Het is een van de populairste programmeertalen ter wereld.
 
@@ -296,8 +296,8 @@ En pas in `draw()` de regel die de tekst toont aan:
 Zodra je een dropje eet, moeten we `aantalGegeten` verhogen en de tekst bijwerken:
 
 ```javascript
-  aantalGegeten = aantalGegeten + 1
-  tekstBovenaan = aantalGegeten + ' dropjes gegeten!'
+    aantalGegeten = aantalGegeten + 1
+    tekstBovenaan = aantalGegeten + ' dropjes gegeten!'
 ```
 
 Kun je bovenstaande twee regels op de juiste plek zetten?
@@ -309,7 +309,25 @@ Als je 1 dropje gegeten hebt, staat er toch "dropjes", terwijl het er maar 1 is.
 
 Veel drop eten is niet echt een uitdaging als je er zo lang over kan doen als je wilt. Dus laten we zorgen dat een speler 10 seconden heeft om zo veel mogelijk dropjes te eten.
 
-@@@TODO
+De functie `millis()` bepaalt het aantal milliseconden (er gaan 1000 milliseconden in 1 seconde) sinds het programma gestart is. We willen dat de tijd pas start als de speler het eerste snoepje eet. Voeg daarom deze regel toe na de regel die `aantalGegeten` met 1 verhoogt:
+
+```javascript
+    if (aantalGegeten == 1) {
+      startTijd = millis() / 1000
+    }
+```
+
+Aan het eind van de `draw()` functie tonen we de score en hoe lang we bezig zijn:
+
+```javascript
+  if (aantalGegeten > 0) {
+    tijd = millis() / 1000 - startTijd
+    tekstBovenaan = aantalGegeten + ' dropjes in ' + 
+        round(tijd, 1) + ' seconden'
+  }
+```
+
+
 
 
 
