@@ -1,14 +1,18 @@
 
 // Dit wordt in het begin 1x uitgevoerd
 function setup() {
+
   // Maak het "schildersdoek" ("canvas") waarop we gaan tekenen
   createCanvas(windowWidth, windowHeight)
-  angleMode(DEGREES) // Hoeken in graden
+  angleMode(DEGREES) // hoeken in graden
 
   // Kies een plek voor het dropje
   dropX = random(25, width - 25)  // kies getal tussen deze twee getallen
   dropY = random(25, height - 25)
-}
+
+} // einde van setup()
+
+//--------------------------------------------------------------------
 
 // Dit wordt steeds opnieuw uitgevoerd
 function draw() {
@@ -18,10 +22,13 @@ function draw() {
   tekenDrop(dropX, dropY)
 
   tekenSmiley(mouseX, mouseY)
-}
 
-// Teken een Engels dropje
+} // einde van draw()
+
+//--------------------------------------------------------------------
+
 function tekenDrop(x, y) {
+
   stroke('black')
   strokeWeight(1)
   fill('white')
@@ -31,7 +38,10 @@ function tekenDrop(x, y) {
   rect(x - 25, y + 5, 50, 10)
   fill('yellow')
   rect(x - 25, y - 5, 50, 10)
-}
+
+} // einde van tekenDrop()
+
+//--------------------------------------------------------------------
 
 function tekenSmiley(x, y) {
   // Hoofd
@@ -54,10 +64,15 @@ function tekenSmiley(x, y) {
   oogOnder = y - 10
   line(oogLinks, oogBoven, oogLinks, oogOnder)
   line(oogRechts, oogBoven, oogRechts, oogOnder)
-}
+
+} // einde van tekenSmiley()
+
+//--------------------------------------------------------------------
 
 // Wanneer het venster van grootte verandert...
 function windowResized() {
   // ...verander dan ons canvas mee!
   resizeCanvas(windowWidth, windowHeight)
-}
+
+} // einde van windowResized()
+

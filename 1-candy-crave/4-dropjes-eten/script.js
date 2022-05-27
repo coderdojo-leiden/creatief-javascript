@@ -3,18 +3,28 @@
 function setup() {
   // Maak het "schildersdoek" ("canvas") waarop we gaan tekenen
   createCanvas(windowWidth, windowHeight)
-  angleMode(DEGREES) // Hoeken in graden
+  angleMode(DEGREES) // hoeken in graden
 
   // Maak het eerste dropje
   maakDropje()
 
-  // Stel dingen in die niet veranderen tijdens het spel
+  // Stel tekstgrootte en uitlijning in
   textSize(40)
   textAlign(LEFT, TOP)
-}
+
+} // einde van setup()
+
+//--------------------------------------------------------------------
 
 // Dit wordt steeds opnieuw uitgevoerd
 function draw() {
+
+  // Is de speler dichtbij genoeg om het dropje op te eten?
+  if (dist(dropX, dropY, mouseX, mouseY) < 50) {
+    // Ja!
+    // Maak een nieuw dropje
+    maakDropje()
+  }
 
   background(240)
 
@@ -27,22 +37,22 @@ function draw() {
 
   tekenSmiley(mouseX, mouseY)
 
-  // Is de speler dichtbij genoeg om het dropje op te eten?
-  if (dist(dropX, dropY, mouseX, mouseY) < 50) {
-    // Ja!
-    // Maak een nieuw dropje
-    maakDropje()
-  }
-}
+} // einde van draw()
 
-// Kies een type en plaats voor een Engels dropje
+//--------------------------------------------------------------------
+
 function maakDropje() {
+
+  // Kies een plaats voor het dropje
   dropX = random(25, width - 25)  // kies getal tussen deze twee getallen
   dropY = random(75, height - 25)
-}
 
-// Teken een Engels dropje
+} // einde van maakDropje()
+
+//--------------------------------------------------------------------
+
 function tekenDrop(x, y) {
+
   stroke('black')
   strokeWeight(1)
   fill('white')
@@ -52,7 +62,10 @@ function tekenDrop(x, y) {
   rect(x - 25, y + 5, 50, 10)
   fill('yellow')
   rect(x - 25, y - 5, 50, 10)
-}
+
+} // einde van tekenDrop()
+
+//--------------------------------------------------------------------
 
 function tekenSmiley(x, y) {
   // Hoofd
@@ -69,16 +82,21 @@ function tekenSmiley(x, y) {
 
   // Ogen
   strokeWeight(6)
-  var oogLinks = x - 22
-  var oogRechts = x + 22
-  var oogBoven = y - 30
-  var oogOnder = y - 10
+  oogLinks = x - 22
+  oogRechts = x + 22
+  oogBoven = y - 30
+  oogOnder = y - 10
   line(oogLinks, oogBoven, oogLinks, oogOnder)
   line(oogRechts, oogBoven, oogRechts, oogOnder)
-}
+
+} // einde van tekenSmiley()
+
+//--------------------------------------------------------------------
 
 // Wanneer het venster van grootte verandert...
 function windowResized() {
   // ...verander dan ons canvas mee!
   resizeCanvas(windowWidth, windowHeight)
-}
+
+} // einde van windowResized()
+

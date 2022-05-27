@@ -3,15 +3,18 @@
 function setup() {
   // Maak het "schildersdoek" ("canvas") waarop we gaan tekenen
   createCanvas(windowWidth, windowHeight)
-  angleMode(DEGREES) // Hoeken in graden
+  angleMode(DEGREES) // hoeken in graden
 
   // Maak het eerste dropje
   maakDropje()
 
-  // Stel dingen in die niet veranderen tijdens het spel
+  // Stel tekstgrootte en uitlijning in
   textSize(40)
   textAlign(LEFT, TOP)
-}
+
+} // einde van setup()
+
+//--------------------------------------------------------------------
 
 // Dit wordt steeds opnieuw uitgevoerd
 function draw() {
@@ -23,30 +26,40 @@ function draw() {
   fill('black')
   text('Eet de dropjes!', 20, 20)
 
-  tekenDrop(dropX, dropY, dropSoort)
-
-  tekenSmiley(mouseX, mouseY)
-
   // Is de speler dichtbij genoeg om het dropje op te eten?
   if (dist(dropX, dropY, mouseX, mouseY) < 50) {
     // Ja!
     // Maak een nieuw dropje
     maakDropje()
   }
-}
 
-// Kies een type en plaats voor een Engels dropje
+  tekenDrop(dropX, dropY, dropSoort)
+
+  tekenSmiley(mouseX, mouseY)
+
+} // einde van draw()
+
+//--------------------------------------------------------------------
+
 function maakDropje() {
+
+  // Kies een soort Engelse drop
   soortenDrop = ['roze met zwart', 'zwart met wit', 'laagjes']
   dropSoort = random(soortenDrop) // kies een van de drie opties
+
+  // Kies een plaats voor het dropje
   dropX = random(25, width - 25)  // kies getal tussen deze twee getallen
   dropY = random(75, height - 25)
-}
 
-// Teken een Engels dropje
+} // einde van maakDropje()
+
+//--------------------------------------------------------------------
+
 function tekenDrop(x, y, soort) {
+
   stroke('black')
   strokeWeight(1)
+
   if (soort == 'roze met zwart') {
     fill('pink')
     circle(x, y, 50)
@@ -54,6 +67,7 @@ function tekenDrop(x, y, soort) {
     fill('black')
     circle(x, y, 20)
   }
+
   if (soort == 'zwart met wit') {
     fill('black')
     circle(x, y, 40)
@@ -61,6 +75,7 @@ function tekenDrop(x, y, soort) {
     fill('white')
     circle(x, y, 32)
   }
+
   if (soort == 'laagjes') {
     fill('white')
     rect(x - 25, y - 25, 50, 50)
@@ -71,7 +86,10 @@ function tekenDrop(x, y, soort) {
     fill('yellow')
     rect(x - 25, y - 5, 50, 10)
   }
-}
+
+} // einde van tekenDrop()
+
+//--------------------------------------------------------------------
 
 function tekenSmiley(x, y) {
   // Hoofd
@@ -94,10 +112,15 @@ function tekenSmiley(x, y) {
   oogOnder = y - 10
   line(oogLinks, oogBoven, oogLinks, oogOnder)
   line(oogRechts, oogBoven, oogRechts, oogOnder)
-}
+
+} // einde van tekenSmiley()
+
+//--------------------------------------------------------------------
 
 // Wanneer het venster van grootte verandert...
 function windowResized() {
   // ...verander dan ons canvas mee!
   resizeCanvas(windowWidth, windowHeight)
-}
+
+} // einde van windowResized()
+

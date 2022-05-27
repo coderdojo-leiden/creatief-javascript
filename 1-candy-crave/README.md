@@ -88,16 +88,24 @@ function tekenSmiley(x, y) {
 }
 ```
 
-Pas de functie `draw()` aan zodat die er zo uitziet:
+We hebben nu een nieuwe functie die een smiley tekent, maar we moeten die ook nog gebruiken. Dat noemen we *aanroepen*.
+
+Pas de functie `draw()` aan zodat die de `tekenSmiley` functie aanroept:
 
 ```javascript
+//---------------------------
+
 function draw() {
+
   background(240)
   tekenSmiley(mouseX, mouseY)
-}
+
+} // einde van draw()
+
+//---------------------------
 ```
 
-Onze functie `tekenSmiley`, krijgt een `x` en `y` waarde aangeleverd. De waardes die een functie aangeleverd krijgt heten ook wel *parameters*.
+We stoppen de positie van de muiscursor, `mouseX` en `mouseY`, in onze functie `tekenSmiley`. De waardes die een functie meekrijgt heten ook wel *parameters*.
 
 Probeer het programma uit. Zie je de smiley? Begrijp je hoe deze getekend wordt?
 
@@ -133,6 +141,8 @@ Als we een spel willen maken, hebben we wel een doel nodig. Bijvoorbeeld om zo v
 Laten we eerst een functie maken die een Engels dropje tekent:
 
 ```javascript
+// ---------------------------
+
 function tekenDrop(x, y) {
   stroke('black')
   strokeWeight(1)
@@ -143,7 +153,9 @@ function tekenDrop(x, y) {
   rect(x - 25, y + 5, 50, 10)
   fill('yellow')
   rect(x - 25, y - 5, 50, 10)
-}
+} // einde van tekenDrop()
+
+// ---------------------------
 ```
 
 We gebruiken hier de functie `rect(x, y, breedte, hoogte)` die een rechthoek tekent. Dit is maar 1 soort Engelse drop, maar verderop gaan we nog andere soorten toevoegen. Natuurlijk kun je nu al zelf een ander soort dropje tekenen als je wilt. Of heel iets anders.
@@ -181,7 +193,7 @@ Hiervoor hebben we de `if` instructie nodig, die een stukje code alleen uitvoert
 
 De voorwaarde is hier: "de speler (muiscursor) is dicht bij het dropje". We bepalen dit met de `dist(x1, x2, y1, y2)` functie die de afstand tussen twee punten berekent.
 
-Voeg deze regels toe aan het eind van de `draw()` functie:
+Voeg deze regels toe aan de `draw()` functie, vlak voor de regel `tekenDrop(dropX, dropY)`:
 
 ```javascript
   // Is de speler dichtbij genoeg om het dropje op te eten?
@@ -190,6 +202,8 @@ Voeg deze regels toe aan het eind van de `draw()` functie:
     dropX = random(25, width - 25)
     dropY = random(75, height - 25)
   }
+
+  tekenDrop(dropX, dropY)
 ```
 
 Begrijp je wat hier gebeurt? `<` is het "kleiner dan" teken, dus er staat eigenlijk "afstand tussen dropje en muiscursor is kleiner dan 50 pixels". Alleen als dat waar is, worden de volgende twee regels (tussen de `{` en `}`) uitgevoerd.
@@ -205,8 +219,21 @@ Bij het kiezen van het nieuwe dropje gebruiken we dezelfde twee regels als we al
 
 Als je op meerdere plekken dezelfde code hebt staan, is het meestal verstandig om deze code te verplaatsen naar een nieuwe functie, en die functie op meerdere plekken aan te roepen. Als je de code dan wilt veranderen, hoeft dat maar op 1 plek.
 
-Kun jij een functie `maakDropje` maken en die in zowel `setup` als in `draw` aanroepen?
+Kun jij een functie `maakDropje()` maken en die in zowel `setup` als in `draw` aanroepen?
 
+<details>
+  <summary>HINT</summary>
+  <p>Zo ziet de functie er uit:</p>
+  <code>
+  // -----------------------------<br><br>
+  function maakDropje() {<br>
+  &nbsp;&nbsp;dropX = random(25, width - 25)<br>
+  &nbsp;&nbsp;dropY = random(75, height - 25)<br>
+  } // einde van maakDropje()<br><br>
+  // -----------------------------<br>
+  </code>
+  <p>Voeg deze functie toe onder de <code>draw()</code> functie en roep 'm aan vanuit <code>setup()</code> en <code>draw()</code>.</p>
+</details>
 
 ## Instructies tonen
 
@@ -237,12 +264,16 @@ Op de eerste regel geef je een lijst van 2 soorten dropjes. Op de tweede regel k
 
 Nu moeten we zorgen dat we verschillende dropjes tekenen. Hiervoor gebruiken we weer de `if` instructie, ditmaal om te checken of een variabele (`dropSoort`) een waarde heeft (bijvoorbeeld `'zwart met wit'`). Let op dat vergelijken gebeurt met *twee* isgelijktekens! (`==`)
 
-Pas de `tekenDrop` functie aan zoals hieronder staat (let op, er is een parameter `soort` bijgekomen). Of je kunt natuurlijk je eigen variaties tekenen.
+Pas de `tekenDrop` functie aan zoals hieronder staat (let op, er is een derde parameter `soort` bijgekomen). Of je kunt natuurlijk je eigen variaties tekenen.
 
 ```javascript
+//---------------------------------
+
 function tekenDrop(x, y, soort) {
+
   stroke('black')
   strokeWeight(1)
+
   if (soort == 'zwart met wit') {
     fill('black')
     circle(x, y, 40)
@@ -250,6 +281,7 @@ function tekenDrop(x, y, soort) {
     fill('white')
     circle(x, y, 32)
   }
+
   if (soort == 'laagjes') {
     fill('white')
     rect(x - 25, y - 25, 50, 50)
@@ -260,10 +292,13 @@ function tekenDrop(x, y, soort) {
     fill('yellow')
     rect(x - 25, y - 5, 50, 10)
   }
-}
+
+} // einde van tekenDrop()
+
+//---------------------------------
 ```
 
-Omdat er een derde parameter, `soort`, bijgekomen is, moeten we de aanroep van de functie in `draw()` ook aanpassen:
+Omdat er een derde parameter bijgekomen is, moeten we de aanroep van de functie in `draw()` ook aanpassen:
 
 ```javascript
   tekenDrop(dropX, dropY, dropSoort)
@@ -271,7 +306,7 @@ Omdat er een derde parameter, `soort`, bijgekomen is, moeten we de aanroep van d
 
 Probeer het maar uit. Zie je allebei de soorten dropjes voorbij komen?
 
-Kun je zelf nog een derde soort toevoegen?
+Kun je zelf nog een derde soort Engelse drop (of iets anders natuurlijk) toevoegen?
 
 Laten we nu gaan bijhouden hoeveel dropjes je gegeten hebt.
 
@@ -293,42 +328,77 @@ En pas in `draw()` de regel die de tekst toont aan:
   text(tekstBovenaan, 20, 20)
 ```
 
-Zodra je een dropje eet, moeten we `aantalGegeten` verhogen en de tekst bijwerken:
+Zodra je een dropje eet, moeten we `aantalGegeten` verhogen en de tekst bijwerken. Kun jij de twee regels hieronder op de juiste plek zetten?
 
 ```javascript
     aantalGegeten = aantalGegeten + 1
     tekstBovenaan = aantalGegeten + ' dropjes gegeten!'
 ```
 
-Kun je bovenstaande twee regels op de juiste plek zetten?
-
-Als je 1 dropje gegeten hebt, staat er toch "dropjes", terwijl het er maar 1 is. Als je wilt, kun je in dat geval een andere tekst tonen, bijvoorbeeld "Lekker dropje, zijn er nog meer?". Dit kun je doen door een `if` instructie toe te voegen na de twee regels hierboven.
+Als je 1 dropje gegeten hebt, staat er toch "dropje**s**", terwijl het er maar 1 is. Als je wilt, kun je in dat geval een andere tekst tonen, bijvoorbeeld "Lekker dropje, zijn er nog meer?". Dit kun je doen door een `if` instructie toe te voegen na de twee regels hierboven.
 
 
 ## Eet zo snel mogelijk!
 
-Veel drop eten is niet echt een uitdaging als je er zo lang over kan doen als je wilt. Dus laten we zorgen dat een speler 10 seconden heeft om zo veel mogelijk dropjes te eten.
+Veel drop eten is niet echt een uitdaging als je er zo lang over kan doen als je wilt. Dus laten we zorgen dat een speler 10 seconden heeft om zo veel mogelijk dropjes te eten. Daarvoor moeten we de speeltijd bijhouden.
 
-De functie `millis()` bepaalt het aantal milliseconden (er gaan 1000 milliseconden in 1 seconde) sinds het programma gestart is. We willen dat de tijd pas start als de speler het eerste snoepje eet. Voeg daarom deze regel toe na de regel die `aantalGegeten` met 1 verhoogt:
-
-```javascript
-    if (aantalGegeten == 1) {
-      startTijd = millis() / 1000
-    }
-```
-
-Aan het eind van de `draw()` functie tonen we de score en hoe lang we bezig zijn:
+De functie `millis()` bepaalt het aantal milliseconden (er gaan 1000 milliseconden in 1 seconde) sinds het programma gestart is. Voeg deze code toe aan de `draw`-functie:
 
 ```javascript
-  if (aantalGegeten > 0) {
-    tijd = millis() / 1000 - startTijd
+  // Hoe lang is het spel bezig?
+  tijd = millis() / 1000
+  if (tijd < 10) {
+
+    // Het spel is bezig, toon score en tijd
     tekstBovenaan = aantalGegeten + ' dropjes in ' + 
         round(tijd, 1) + ' seconden'
+
+  } else {
+
+    // Het spel is afgelopen; toon de score
+    tekstBovenaan = 'Je hebt in 10 seconden ' + aantalGegeten + 
+        ' dropjes gegeten!\nGefeliciteerd!'
+
   }
 ```
 
+Probeer het uit. Als je een dropje eet, begint de tijd dan mee te lopen?
 
+Zoals je ziet, kun je achter de `}` van een `if`-opdracht het woord `else` ("of anders...") zetten. Daarna volgen tussen `{` en `}` opdrachten die moeten worden uitgevoerd als *niet* aan de voorwaarde van de `if` voldaan is.
 
+Hierboven staat dus: "als er minder dan 10 seconden voorbij zijn, toon dan tijd en score, maar anders (`else`), dus als er 10 seconden of meer voorbij zijn: feliciteer de speler met het resultaat."
+
+Er is een probleem: als er 10 seconden voorbij zijn, kun je dropjes blijven eten en blijft je score oplopen.
+
+We moeten het tekenen en opeten van dropjes alleen uitvoeren als het spel bezig is, en niet meer als het spel is afgelopen.
+
+Hiervoor kunnen we weer gebruik maken van de `if`-opdracht die we hierboven hadden. We breiden deze `if`-opdracht uit zodat er nu dit staat:
+
+```javascript
+  if (tijd < 10) {
+    // Het spel is bezig. Toon score en tijd.
+    tekstBovenaan = aantalGegeten + ' dropjes in ' + round(tijd, 1) + 
+        ' seconden'
+
+    // Is de speler dichtbij genoeg om het dropje op te eten?
+    if (dist(dropX, dropY, mouseX, mouseY) < 50) {
+      // Ja! Tel dropje en werk de tekst bij
+      aantalGegeten = aantalGegeten + 1
+
+      // Maak een nieuw dropje
+      maakDropje()
+    }
+
+    tekenDrop(dropX, dropY, dropSoort)
+    
+  } else {
+    // (dit gedeelte blijft zoals het net was)
+  }  
+```
+
+Zie je wat we gedaan hebben? We hebben het opeten van het dropje en het tekenen van het dropje binnen de `if`-opdracht gezet, zodat die alleen uitgevoerd wordt als er minder dan 10 seconden voorbij zijn.
+
+Probeer het maar uit. Werkt het nu helemaal goed?
 
 
 ## Lijst van functies, variabelen en termen
