@@ -401,6 +401,27 @@ Zie je wat we gedaan hebben? We hebben het opeten van het dropje en het tekenen 
 Probeer het maar uit. Werkt het nu helemaal goed?
 
 
+## Uitdaging: Geluid spelen
+
+Je kunt nog van alles verbeteren aan het spel. Voeg bijvoorbeeld een geluidseffect toe als je een snoepje opeet! Zet wel je volume laag, zodat je anderen niet stoort.
+
+Om geluiden te kunnen spelen, moet je in `index.html` het volgende toevoegen (net na de `<script...` regel die er al staat):
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.js"></script>
+```
+
+Er staat al een geluidseffect in het project (`geluid/hap.mp3`), maar je kunt ook zelf een geluidseffect zoeken (in `.mp3` formaat) en het aan je project toevoegen met het plus-knopje.
+
+Maak een nieuwe functie die `preload` heet en laad het geluidsbestand met `hap = loadSound('geluid/hap.mp3')`. Gebruik dan in `draw()` de instructie `hap.play()` om het geluid af te spelen als de speler een dropje eet.
+
+Let op: je hoort niets, totdat de speler een keer met de muis geklikt heeft! Probeer het spel dus zo aan te passen dat er eerst staat "Klik om te beginnen", en het spel pas echt begint als de speler met de muis geklikt heeft (gebruik `function mouseClicked() { ... }` om te weten wanneer de speler klikt).
+
+Je moet nu ook de tijdmeting aanpassen, want `millis()` meet vanaf het laden van de pagina, niet vanaf het moment dat de speler met de muis klikt.
+
+Dit is misschien best lastig! Als je er niet uitkomt, vraag dan of een mentor wil meekijken.
+
+
 ## Lijst van functies, variabelen en termen
 
 Hier zie je alle functies die we hier gebruikt hebben.
@@ -411,22 +432,44 @@ Wil je zelf op zoek naar meer functies (en kun je een beetje Engels)? Kijk dan [
 
 | **Functie-aanroep**      | **Wat doet het?**                                      |
 |--------------------------|--------------------------------------------------------|
-| `background('gray')` of<br>`background(240)`     | Geef het hele canvas een grijze achtergrond (je kunt een [kleurnaam](https://www.w3schools.com/tags/ref_colornames.asp) gebruiken, of een grijswaarde van 0 t/m 255) |
+| `angleMode(DEGREES)`     | Stelt in dat hoeken in graden gegeven worden (er gaan 360 graden in een cirkel) |
+| `arc(100, 100, 60, 40, 0, 180)` | Tekent een deel van een cirkel of ellips (afgeplatte cirkel). Gebruikt `100,100` als middelpunt. Gebruikt `60` als breedte en `40` als hoogte voor de ellips. Tekent een "taartpunt" van de ellips van `0` tot `180` graden (precies de helft) |
+| `background('gray')` of<br>`background(240)`        | Geef het hele canvas een grijze achtergrond (of een andere kleur, zie <a target='_blank' href='https://www.w3schools.com/tags/ref_colornames.asp'>deze kleurnamen</a> |
 | `createCanvas(windowWidth, windowHeight)` | Maak een canvas zo groot als het venster |
 | `circle(50, 100, 40)`    | Teken een cirkel met grootte `40` met als middelpunt `50, 100` |
+| `dist(50, 100, 200, 250)` | De afstand tussen de punten `50,100` en `200,250` |
 | `draw()`                 | Alles wat je in deze functie doet, wordt steeds opnieuw uitgevoerd |
 | `fill('blue')`           | Teken vormen met blauwe invulling                      |
 | `function`               | Gebruik je om een functie te maken: een stukje code dat 1 ding doet en dat je vanaf meerdere plekken in je code kunt uitvoeren |
 | `height`                 | Deze variabele is altijd gelijk aan de hoogte van het canvas |
+| `line(10, 20, 30, 40)`   | Tekent een lijn tussen de punten `10,20` en `30,40` |
+| `millis()`               | Hoe lang het programma al draait (in duizendsten van seconden; dus 2000 is 2 seconden) |
 | `mouseX`, `mouseY`       | De positie van de muiscursor (in pixels van links en van boven) |
 | `noStroke()`             | Teken vormen zonder lijnen eromheen                    |
 | `noFill()`               | Teken vormen zonder invulling                          |
-| `rect(10, 20, 30, 40)`               | Teken een rechthoek met linkerbovenhoek `10,20` die `30` breed en `40` hoog is |
+| `random(10, 20)`         | Kies een willekeurig getal tussen `10` en `20`. Dit kan ook een breukgetal worden! Als je een geheel getal wilt, gebruik dan `round()` om het af te ronden. |
+| `random(['hond', 'kat', 'konijn'])` | Kies een van de dieren uit de lijst. |
+| `rect(10, 20, 30, 40)`   | Teken een rechthoek met linkerbovenhoek `10,20` die `30` breed en `40` hoog is |
+| `resizeCanvas(windowWidth, windowHeight)`   | Maak het canvas weer zo groot als het venster (wordt meestal aangeroepen vanuit `function windowResized()`) |
+| `round(0.7)`             | Rond af op een geheel getal (`0.7` wordt afgerond op `1`; `0.3` zou worden afgerond op `0`) |
 | `setup()`                | Alles wat je in deze functie doet, wordt in het begin 1x uitgevoerd |
 | `stroke('red')`          | Gebruik rood als lijnkleur om vormen heen |
+| `strokeWeight(3)`         | Zet de lijndikte op 3 |
 | `text('Hallo', 50, 100)` | Schrijf `Hallo` op positie `50, 100`  |
 | `textAlign(LEFT)`        | Tekst links uitlijnen (of RIGHT=rechts, CENTER=midden) |
 | `textSize(10)`           | Zet tekstgrootte op 10                                 |
-| `triangle(0, 0, 10, 10, 0, 10)`               | Teken een driehoek met als hoekpunten `0,0`, `10,10` en `0,10` |
+| `triangle(0, 0, 10, 10, 0, 10)`  | Teken een driehoek met als hoekpunten `0,0`, `10,10` en `0,10` |
 | `width`                  | Deze variabele is altijd gelijk aan de breedte van het canvas |
 | `windowWidth/Height`     | Grootte van het venster (meestal gelijk aan canvasgrootte, `width/height`) |
+
+
+## Tussenresultaten
+
+Zit je een beetje vast, en ben je benieuwd hoe je het bijvoorbeeld kunt aanpakken? Hier zijn een aantal tussenresultaten die je kunt gebruiken:
+
+- [Smiley](2-smiley/script.js)
+- [Dropjes](3-dropjes/scripts.js)
+- [Dropjes eten](4-dropjes-eten/script.js)
+- [Verschillende dropjes](5-verschillende-dropjes/script.js)
+- [Dropjes tellen](6-dropjes-tellen/script.js)
+- [Eet zo snel mogelijk](7-eet-zo-snel-mogelijk/script.js)

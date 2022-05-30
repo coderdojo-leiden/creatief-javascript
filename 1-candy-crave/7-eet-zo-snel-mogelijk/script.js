@@ -3,20 +3,22 @@
 function setup() {
   // Maak het "schildersdoek" ("canvas") waarop we gaan tekenen
   createCanvas(windowWidth, windowHeight)
-  angleMode(DEGREES) // Hoeken in graden
+  angleMode(DEGREES) // hoeken in graden
 
   // Zet variabelen op juiste waarde
-  tekstBovenaan = 'Eet zoveel mogelijk dropjes in 10 seconden!'
+  tekstBovenaan = 'Eet de dropjes!'
   aantalGegeten = 0
-  spelBezig = true
 
   // Maak het eerste dropje
   maakDropje()
 
-  // Stel dingen in die niet veranderen tijdens het spel
+  // Stel tekstgrootte en uitlijning in
   textSize(40)
   textAlign(LEFT, TOP)
-}
+
+} // einde van setup()
+
+//--------------------------------------------------------------------
 
 // Dit wordt steeds opnieuw uitgevoerd
 function draw() {
@@ -28,74 +30,75 @@ function draw() {
   fill('black')
   text(tekstBovenaan, 20, 20)
 
-  if (spelBezig) {
+  // Hoe lang is het spel bezig?
+  tijd = millis() / 1000
+  if (tijd < 10) {
+
+    // Het spel is bezig. Toon score en tijd.
+    tekstBovenaan = aantalGegeten + ' dropjes in ' + round(tijd, 1) + 
+        ' seconden'
+
+    // Is de speler dichtbij genoeg om het dropje op te eten?
+    if (dist(dropX, dropY, mouseX, mouseY) < 50) {
+      // Ja! Tel dropje en werk de tekst bij
+      aantalGegeten = aantalGegeten + 1
+
+      // Maak een nieuw dropje
+      maakDropje()
+    }
+
     tekenDrop(dropX, dropY, dropSoort)
+    
+  } else {
+
+    // Het spel is afgelopen. Toon de eindscore.
+    tekstBovenaan = 'Je hebt in 10 seconden ' + aantalGegeten + 
+        ' dropjes gegeten!\nGefeliciteerd!'
+
   }
 
   tekenSmiley(mouseX, mouseY)
+  
+} // einde van draw()
 
-  // Is de speler dichtbij genoeg om het dropje op te eten?
-  if (spelBezig && dist(dropX, dropY, mouseX, mouseY) < 50) {
-    // Ja!
-    aantalGegeten = aantalGegeten + 1
-    if (aantalGegeten == 1) {
-      startTijd = millis() / 1000
-    }
+//--------------------------------------------------------------------
 
-    // Maak een nieuw dropje
-    maakDropje()
-  }
-
-  // Zijn er 10 seconden voorbij? Dan is het spel afgelopen.
-  if (aantalGegeten > 0) {
-    tijd = millis() / 1000 - startTijd
-    if (tijd >= 10) {
-      spelBezig = false
-      tekstBovenaan = 'Je hebt in 10 seconden ' + aantalGegeten + 
-        ' dropjes gegeten!\nGefeliciteerd!'
-    } else {
-      tekstBovenaan = aantalGegeten + ' dropjes in ' + 
-          round(tijd, 1) + ' seconden'
-    }
-  }
-}
-
-// Kies een type en plaats voor een Engels dropje
 function maakDropje() {
+
+  // Kies een soort Engelse drop
   soortenDrop = ['roze met zwart', 'zwart met wit', 'laagjes']
   dropSoort = random(soortenDrop) // kies een van de drie opties
+
+  // Kies een plaats voor het dropje
   dropX = random(25, width - 25)  // kies getal tussen deze twee getallen
   dropY = random(75, height - 25)
-}
 
-// Teken een Engels dropje
+} // einde van maakDropje()
+
+//--------------------------------------------------------------------
+
 function tekenDrop(x, y, soort) {
 
   stroke('black')
   strokeWeight(1)
 
   if (soort == 'roze met zwart') {
-
     fill('pink')
     circle(x, y, 50)
     noStroke()
     fill('black')
     circle(x, y, 20)
-
   }
   
   if (soort == 'zwart met wit') {
-
     fill('black')
     circle(x, y, 40)
     noStroke()
     fill('white')
     circle(x, y, 32)
-
   }
   
   if (soort == 'laagjes') {
-
     fill('white')
     rect(x - 25, y - 25, 50, 50)
     noStroke()
@@ -104,9 +107,11 @@ function tekenDrop(x, y, soort) {
     rect(x - 25, y + 5, 50, 10)
     fill('yellow')
     rect(x - 25, y - 5, 50, 10)
-
   }
-}
+
+} // einde van tekenDrop()
+
+//--------------------------------------------------------------------
 
 function tekenSmiley(x, y) {
   // Hoofd
@@ -129,10 +134,15 @@ function tekenSmiley(x, y) {
   oogOnder = y - 10
   line(oogLinks, oogBoven, oogLinks, oogOnder)
   line(oogRechts, oogBoven, oogRechts, oogOnder)
-}
+
+} // einde van tekenSmiley()
+
+//--------------------------------------------------------------------
 
 // Wanneer het venster van grootte verandert...
 function windowResized() {
   // ...verander dan ons canvas mee!
   resizeCanvas(windowWidth, windowHeight)
-}
+
+} // einde van windowResized()
+
