@@ -31,7 +31,7 @@ Elke keer als je een wijzing maakt, sla het het script op (Ctrl+S), ga je naar d
 
 ## Je eerste JavaScript-programma
 
-Bekijk het bestand `script.js` en voer het uit. Beweeg de muiscursor over het venster. Als het goed is, zie je een groene cirkel die de muiscursor volgt.
+Bekijk het bestand `script.js` en voer het uit (klik op de Run knop). Beweeg de muiscursor over het venster. Als het goed is, zie je een groene cirkel die de muiscursor volgt.
 
 Begrijp je hoe dit programma werkt? Nee? Laten we kijken of we erachter kunnen komen. Verderop vind je ook een lijst waarin alle termen staan uitgelegd.
 
@@ -43,11 +43,10 @@ Als je het programma verandert, zie je vanzelf hoe het werkt. Als je iets hebt v
 
 Wat je bijvoorbeeld kunt proberen:
 - Zet twee schuine strepen `//` voor een van de regels, dus bijvoorbeeld: `//noStroke()`. De regel wordt grijs. Klik nu weer op Run.<br>Wat is er anders geworden? Probeer dit ook bij andere regels. Wat denk je dat `//` aan het begin van de regel doet?
-- Probeer andere getallen bij `textSize(20)` of `circle(mouseX, mouseY, 140)`. En probeer eens `textAlign(LEFT)` of `textAlign(RIGHT)`.
+- Probeer andere getallen bij `textSize(20)` of `circle(mouseX, mouseY, 140)`.
 - Probeer andere kleuren bij `background('gray')`, of de regels met `fill(...)`, bijvoorbeeld `'purple'` (paars) of `'green'` (groen). Meer (Engelse) kleurnamen vind je [hier](https://www.w3schools.com/tags/ref_colornames.asp).
-- Verander de tekst in de laatste regel.<br>Wat denk je dat `\n` betekent? Haal 'm eens weg, of zet er een extra zodat er `'Hallo\n\nJavaScript'` staat!
-- Maak van `mouseY - 15` op de laatste regel eens `mouseY - 50` of `mouseY + 50`. Wat gebeurt er nu? En wat als je `(mouseX, mouseY)` vervangt door `(width-mouseX, height-mouseY)`?
-- Wat gebeurt er als je `mouseX` weghaalt en vervangt door een getal, bijvoorbeeld `200`? Probeer dit ook met `mouseY`. Wat denk je dat `mouseX` en `mouseY` betekenen?
+- Maak van `mouseY` eens `mouseY - 50` of `mouseY + 50`. Wat gebeurt er nu? En wat als je `(mouseX, mouseY)` vervangt door `(width-mouseX, height-mouseY)`?
+- Wat gebeurt er als je `mouseX` weghaalt en vervangt door alleen een getal, bijvoorbeeld `200`? Probeer dit ook met `mouseY`. Wat denk je dat `mouseX` en `mouseY` betekenen?
 - Werkt het programma nog als je `mouseX` verandert in `mousex` (dus met een kleine letter `x`)?
 - Wat kun je zelf nog bedenken om te veranderen aan het programma?
 
@@ -60,12 +59,17 @@ Je begrijpt het programma nu een beetje. Laten we nu kijken of we de cirkel wat 
 
 Natuurlijk kun jij er zelf van maken wat je leuk vindt, door bijvoorbeeld oortjes en snorharen toe te voegen, of hoorns, of een slurf.
 
-Maar eerst gaan we een functie (`function`) maken die ons gezicht tekent. Het is handig om tekenopdrachten die bij elkaar horen in een functie te verzamelen; die kun je dan bijvoorbeeld meerdere keren uitvoeren, zoals we zometeen zullen doen.
+Maar eerst gaan we een functie (`function`) maken die ons gezicht tekent. Het is handig om (teken)opdrachten die bij elkaar horen in een functie te verzamelen; die kun je dan bijvoorbeeld meerdere keren uitvoeren, zoals we zometeen zullen doen.
 
-Voeg dit toe aan je code:
+Voeg onderstaande code toe, helemaal onderaan je programma.
+
+> **TIP:** Gebruik kopieren en plakken om code over te nemen: selecteer de code die je wilt overnemen met de muis, druk dan Ctrl+C (kopieren), klik dan in je programma op de plek waar je de code wilt hebben en druk Ctrl+V (plakken).
 
 ```javascript
+// ---------------------------
+
 function tekenSmiley(x, y) {
+
   // Hoofd
   stroke('black')
   strokeWeight(1)
@@ -85,7 +89,10 @@ function tekenSmiley(x, y) {
   oogOnder = y - 10
   line(oogLinks, oogBoven, oogLinks, oogOnder)
   line(oogRechts, oogBoven, oogRechts, oogOnder)
-}
+
+} // einde van tekenSmiley()
+
+// ---------------------------
 ```
 
 We hebben nu een nieuwe functie die een smiley tekent, maar we moeten die ook nog gebruiken. Dat noemen we *aanroepen*.
@@ -114,19 +121,25 @@ Probeer het programma uit. Zie je de smiley? Begrijp je hoe deze getekend wordt?
 Probeer te veranderen hoe het gezichtje getekend wordt:
 
 - Wat doen `stroke` en `strokeWeight` denk je? Pas de kleurnaam en de getallen eens aan, klik "Run" en kijk wat er verandert.
-- Wat doet de `arc` functie? Waarom staat er `noFill()` vlak voor de `arc` functie gebruikt wordt? Wat als je `noFill()` uitschakelt (zet er `//` voor)? Wijzig ook eens de parameters `0, 180` eens en kijk wat er gebeurt.
-- Hoe worden de ogen getekend? Waarvoor dienen de 4 regels die de variabelen `oogLinks`, `oogRechts`, etc. zetten? Ze worden weer gebruikt in de twee `line` regels; begrijp je hoe het werkt?
-- Wat wil jij nog veranderen aan het gezicht? Een neus, andere ogen, oren, snorharen of een hoedje?<br>**TIP:** Als je een driehoek wilt tekenen, gebruik dan <nobr>`triangle(x, y, x + 10, y + 10, x - 10, y + 10)`</nobr>. Zet wel eerst de juiste `fill('kleur')`, anders zie je de driehoek misschien niet tegen de achtergrond.
+- Wat doet de `arc` functie? Waarom staat er `noFill()` vlak voor de `arc` functie gebruikt wordt? Wat als je `noFill()` wijzigt in `fill('white ')`? Wijzig ook eens de laatste twee parameters (`0, 180`) eens en kijk wat er gebeurt.
+- Hoe worden de ogen getekend? Waarvoor dienen de 4 regels die de variabelen `oogLinks`, `oogRechts`, etc. zetten? Ze worden weer gebruikt in de twee `line` regels; begrijp je hoe het werkt? Kun je de ogen verder uit elkaar zetten? Of er cirkeltjes van maken?
+- Wat wil jij nog veranderen aan het gezicht? Een neus, andere ogen, oren, snorharen of een hoedje?<br>**TIP:** Als je een driehoek wilt tekenen, gebruik dan <nobr><code>triangle(x, y, x + 10, y + 10, x - 10, y + 10)</code></nobr><br>Zet wel eerst een andere `fill('kleur')`, anders zie je de driehoek misschien niet tegen de achtergrond.
 
 Pas de functie `draw()` nu nog eens aan:
 
 ```javascript
+//---------------------------
+
 function draw() {
+
   background(240)
   tekenSmiley(mouseX, mouseY)
   tekenSmiley(mouseX + 140, mouseY)
   tekenSmiley(mouseX, mouseY - 140)
-}
+
+} // einde van draw()
+
+//---------------------------
 ```
 
 Wat gebeurt er nu? Snap je hoe dat komt? En snap je nu waarom het handig kan zijn om sommige opdrachten te verzamelen in een `function`?
@@ -180,6 +193,8 @@ Natuurlijk moeten we het dropje wel tekenen, anders zien we niets. Zet deze rege
 
 Probeer het programma uit. Zie je het dropje?
 
+> **LET OP:** Replit heeft een "console" waarin je uitleg krijgt als er iets misgaat met je programma. Dat is heel handig, maar het valt wel over je programma heen. Je kunt het uit- en inschakelen met het gereedschap-icoontje rechtsboven. (@@@plaatje)
+
 Als je de muiscursor over het dropje beweegt, staat het gezicht dan *voor* of *achter* het dropje? Hoe zou je ervoor kunnen zorgen dat het gezicht altijd over het dropje heen getekend wordt? Denk aan de volgorde waarin ze getekend worden.
 
 Nu hebben we een dropje, maar hoe eten we het op?
@@ -191,7 +206,7 @@ We willen dat het dropje opgegeten wordt zodra de speler (dus de muiscursor) er 
 
 Hiervoor hebben we de `if` instructie nodig, die een stukje code alleen uitvoert als aan een bepaalde voorwaarde voldaan is.
 
-De voorwaarde is hier: "de speler (muiscursor) is dicht bij het dropje". We bepalen dit met de `dist(x1, x2, y1, y2)` functie die de afstand tussen twee punten berekent.
+De voorwaarde is hier: "de speler (muiscursor) is dicht bij het dropje". We bepalen dit met de `dist(x1, x2, y1, y2)` functie die de afstand tussen twee punten bepaalt.
 
 Voeg deze regels toe aan de `draw()` functie, vlak voor de regel `tekenDrop(dropX, dropY)`:
 
@@ -245,7 +260,8 @@ Voeg deze regels toe in `draw()`, net onder de `background` regel:
   // Tekst bovenin
   noStroke()
   fill('black')
-  text('Eet de dropjes!', 20, 20)
+  textSize(24)
+  text('Eet de dropjes!', 20, 40)
 ```
 
 ## Meer variatie
@@ -325,7 +341,7 @@ Voeg deze regels toe aan `setup()`:
 En pas in `draw()` de regel die de tekst toont aan:
 
 ```javascript
-  text(tekstBovenaan, 20, 20)
+  text(tekstBovenaan, 20, 40)
 ```
 
 Zodra je een dropje eet, moeten we `aantalGegeten` verhogen en de tekst bijwerken. Kun jij de twee regels hieronder op de juiste plek zetten?
@@ -335,7 +351,7 @@ Zodra je een dropje eet, moeten we `aantalGegeten` verhogen en de tekst bijwerke
     tekstBovenaan = aantalGegeten + ' dropjes gegeten!'
 ```
 
-Als je 1 dropje gegeten hebt, staat er toch "dropje**s**", terwijl het er maar 1 is. Als je wilt, kun je in dat geval een andere tekst tonen, bijvoorbeeld "Lekker dropje, zijn er nog meer?". Dit kun je doen door een `if` instructie toe te voegen na de twee regels hierboven.
+Als je 1 dropje gegeten hebt, staat er toch "dropje**s**", terwijl het er maar 1 is. Als je wilt, kun je in dat geval een andere tekst tonen, bijvoorbeeld "Lekker dropje, zijn er nog meer?". Dit kun je doen door een `if` instructie toe te voegen na de twee regels hierboven. Als je het leuk vindt, kun je natuurlijk nog meer `if` instructies gebruiken om andere teksten te tonen wanneer je 2, 3, of nog meer dropjes gegeten hebt.
 
 
 ## Eet zo snel mogelijk!
@@ -343,6 +359,8 @@ Als je 1 dropje gegeten hebt, staat er toch "dropje**s**", terwijl het er maar 1
 Veel drop eten is niet echt een uitdaging als je er zo lang over kan doen als je wilt. Dus laten we zorgen dat een speler 10 seconden heeft om zo veel mogelijk dropjes te eten. Daarvoor moeten we de speeltijd bijhouden.
 
 De functie `millis()` bepaalt het aantal milliseconden (er gaan 1000 milliseconden in 1 seconde) sinds het programma gestart is. Voeg deze code toe aan de `draw`-functie:
+
+(@@@ deze code overschrijft je eigen boodschappen weer, niet zo leuk)
 
 ```javascript
   // Hoe lang is het spel bezig?
@@ -366,9 +384,9 @@ Probeer het uit. Als je een dropje eet, begint de tijd dan mee te lopen?
 
 Zoals je ziet, kun je achter de `}` van een `if`-opdracht het woord `else` ("of anders...") zetten. Daarna volgen tussen `{` en `}` opdrachten die moeten worden uitgevoerd als *niet* aan de voorwaarde van de `if` voldaan is.
 
-Hierboven staat dus: "als er minder dan 10 seconden voorbij zijn, toon dan tijd en score, maar anders (`else`), dus als er 10 seconden of meer voorbij zijn: feliciteer de speler met het resultaat."
+Hierboven staat dus: "als er minder dan 10 seconden voorbij zijn, toon dan tijd en score, maar anders (`else`): feliciteer de speler met het resultaat."
 
-Er is een probleem: als er 10 seconden voorbij zijn, kun je dropjes blijven eten en blijft je score oplopen.
+Er is een probleem: als er 10 seconden voorbij zijn, kun je dropjes blijven eten en blijft je score oplopen!
 
 We moeten het tekenen en opeten van dropjes alleen uitvoeren als het spel bezig is, en niet meer als het spel is afgelopen.
 
@@ -397,6 +415,8 @@ Hiervoor kunnen we weer gebruik maken van de `if`-opdracht die we hierboven hadd
 ```
 
 Zie je wat we gedaan hebben? We hebben het opeten van het dropje en het tekenen van het dropje binnen de `if`-opdracht gezet, zodat die alleen uitgevoerd wordt als er minder dan 10 seconden voorbij zijn.
+
+Kijk wel uit dat de code die we binnen de `if`-opdracht hebben toegevoegd nu niet twee keer in je programma staat. Verwijder deze code dus buiten de `if`-opdracht.
 
 Probeer het maar uit. Werkt het nu helemaal goed?
 
