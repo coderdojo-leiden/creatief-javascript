@@ -1,4 +1,4 @@
-# Candy Capture (Creatief Coderen in JavaScript)
+# Candy Crave (Creatief Coderen in JavaScript)
 
 JavaScript is een programmeertaal die vooral door websites gebruikt wordt. Het is een van de populairste programmeertalen ter wereld.
 
@@ -11,7 +11,7 @@ Er zijn twee manieren om het voorbeeldproject te openen en aan de slag te gaan.
 
 ### Bewerken in de browser (Replit)
 
-De makkelijkste manier is om het project te [openen op replit.com](https://replit.com/@JanNiestadt/Creatief-Coderen-1-Candy-Capture#script.js).
+De makkelijkste manier is om het project te [openen op replit.com](https://replit.com/@JanNiestadt/Creatief-Coderen-1-Candy-Crave#script.js).
 
 Je hebt hiervoor wel een (gratis) account nodig. Als je die nog niet hebt: klik op **Sign up** (inschrijven) rechtsboven. Je moet dan een gebruikersnaam en een wachtwoord kiezen en je e-mailadres opgeven. Je ontvangt een mailtje en moet klikken op een link in dat mailtje om je account te activeren.
 
@@ -24,7 +24,7 @@ Wanneer je het programma wilt uitvoeren klik je op de groene knop **Run** (uitvo
 
 Als je geen account kunt of wilt maken op replit.com, kun je ook gewoon in een teksteditor zoals Kladblok of [Notepad++](https://notepad-plus-plus.org/downloads/) werken.
 
-[Download](https://github.com/) het voorbeeldproject (@@@LINK), pak het zipbestand uit op een handige plaats (bijvoorbeeld het bureaublad) en open `index.html` in de browser. Om het programma te bewerken, open je `script.js` in je teksteditor.
+[Download](./1-cirkel-volgt-muis/candy-crave-project.zip) het voorbeeldproject, pak het zipbestand uit op een handige plaats (bijvoorbeeld het bureaublad) en open `index.html` in de browser. Om het programma te bewerken, open je `script.js` in je teksteditor.
 
 Elke keer als je een wijzing maakt, sla het het script op (Ctrl+S), ga je naar de browser en herlaad je de pagina.
 
@@ -411,9 +411,9 @@ Om geluiden te kunnen spelen, moet je in `index.html` het volgende toevoegen (ne
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.js"></script>
 ```
 
-Er staat al een geluidseffect in het project (`geluid/hap.mp3`), maar je kunt ook zelf een geluidseffect zoeken (in `.mp3` formaat) en het aan je project toevoegen met het plus-knopje.
+Er staat al een geluidseffect in het project (`assets/hap.mp3`), maar je kunt ook zelf een geluidseffect zoeken (in `.mp3` formaat) en het aan je project toevoegen met het plus-knopje.
 
-Maak een nieuwe functie die `preload` heet en laad het geluidsbestand met `hap = loadSound('geluid/hap.mp3')`. Gebruik dan in `draw()` de instructie `hap.play()` om het geluid af te spelen als de speler een dropje eet.
+Maak een nieuwe functie die `preload` heet en laad het geluidsbestand met `hap = loadSound('assets/hap.mp3')`. Gebruik dan in `draw()` de instructie `hap.play()` om het geluid af te spelen als de speler een dropje eet.
 
 Let op: je hoort niets, totdat de speler een keer met de muis geklikt heeft! Probeer het spel dus zo aan te passen dat er eerst staat "Klik om te beginnen", en het spel pas echt begint als de speler met de muis geklikt heeft (gebruik `function mouseClicked() { ... }` om te weten wanneer de speler klikt).
 
