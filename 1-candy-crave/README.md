@@ -193,7 +193,11 @@ Natuurlijk moeten we het dropje wel tekenen, anders zien we niets. Zet deze rege
 
 Probeer het programma uit. Zie je het dropje?
 
-> **LET OP:** Replit heeft een "console" waarin je uitleg krijgt als er iets misgaat met je programma. Dat is heel handig, maar het valt wel over je programma heen. Je kunt het uit- en inschakelen met het gereedschap-icoontje rechtsboven. (@@@plaatje)
+<blockquote>
+  <img style="float: right; margin: 10px;" src="images/button-devtools.png">
+  <b>LET OP:</b> Replit heeft een "console" waarin je uitleg krijgt als er iets misgaat met je programma. Dat is heel handig, maar het valt wel over je programma heen. Je kunt het uit- en inschakelen met het gereedschap-icoontje rechtsboven (zie plaatje).
+  <div style="clear: both;"></div>
+</blockquote>
 
 Als je de muiscursor over het dropje beweegt, staat het gezicht dan *voor* of *achter* het dropje? Hoe zou je ervoor kunnen zorgen dat het gezicht altijd over het dropje heen getekend wordt? Denk aan de volgorde waarin ze getekend worden.
 
@@ -360,16 +364,16 @@ Veel drop eten is niet echt een uitdaging als je er zo lang over kan doen als je
 
 De functie `millis()` bepaalt het aantal milliseconden (er gaan 1000 milliseconden in 1 seconde) sinds het programma gestart is. Voeg deze code toe aan de `draw`-functie:
 
-(@@@ deze code overschrijft je eigen boodschappen weer, niet zo leuk)
-
 ```javascript
   // Hoe lang is het spel bezig?
   tijd = millis() / 1000
   if (tijd < 10) {
 
-    // Het spel is bezig, toon score en tijd
-    tekstBovenaan = aantalGegeten + ' dropjes in ' + 
-        round(tijd, 1) + ' seconden'
+    // Het spel is bezig, toon score
+    tekstBovenaan = aantalGegeten + ' dropjes gegeten!'
+
+    // Toon ook nog de tijd, op een nieuwe regel
+    tekstBovenaan = tekstBovenaan + '\n(tijd: ' +round(tijd, 1) + ' seconden)'
 
   } else {
 
@@ -380,7 +384,7 @@ De functie `millis()` bepaalt het aantal milliseconden (er gaan 1000 millisecond
   }
 ```
 
-Probeer het uit. Als je een dropje eet, begint de tijd dan mee te lopen?
+Probeer het uit. Als je een dropje eet, begint de tijd dan mee te lopen? Hoe zou het komen dat de tijd op een nieuwe regel staat?
 
 Zoals je ziet, kun je achter de `}` van een `if`-opdracht het woord `else` ("of anders...") zetten. Daarna volgen tussen `{` en `}` opdrachten die moeten worden uitgevoerd als *niet* aan de voorwaarde van de `if` voldaan is.
 
