@@ -477,7 +477,7 @@ Als we het hebben over positie `50, 100` betekent dat: 50 pixels van links en 10
 Wil je zelf op zoek naar meer functies (en kun je een beetje Engels)? Kijk dan [hier](https://p5js.org/reference/).
 
 | **Functie-aanroep**      | **Wat doet het?**                                      |
-|--------------------------|--------------------------------------------------------|
+| :-- | :-- |
 | `angleMode(DEGREES)`     | Stelt in dat hoeken in graden gegeven worden (er gaan 360 graden in een cirkel) |
 | `arc(100, 100, 60, 40, 0, 180)` | Tekent een deel van een cirkel of ellips (afgeplatte cirkel). Gebruikt `100,100` als middelpunt. Gebruikt `60` als breedte en `40` als hoogte voor de ellips. Tekent een "taartpunt" van de ellips van `0` tot `180` graden (precies de helft) |
 | `background('gray')` of<br>`background(240)`        | Geef het hele canvas een grijze achtergrond (of een andere kleur, zie <a target='_blank' href='https://www.w3schools.com/tags/ref_colornames.asp'>deze kleurnamen</a> |
