@@ -424,26 +424,48 @@ Kijk wel uit dat de code die we binnen de `if`-opdracht hebben toegevoegd nu nie
 
 Probeer het maar uit. Werkt het nu helemaal goed?
 
+Kun je zelf nog varianten op het spel bedenken? Bijvoorbeeld een vies snoepje dat je juist niet moet pakken. Of iets heel anders natuurlijk.
 
-## Uitdaging: Geluid spelen
+Als je wilt, kun je ook verdergaan met een van de uitdagingen hieronder. Of je kunt kijken naar [andere opdrachten en voorbeeldprogramma's](../) zijn.
+
+## Uitdaging: geluid spelen
 
 Je kunt nog van alles verbeteren aan het spel. Voeg bijvoorbeeld een geluidseffect toe als je een snoepje opeet! Zet wel je volume laag, zodat je anderen niet stoort.
 
-Om geluiden te kunnen spelen, moet je in `index.html` het volgende toevoegen (net na de `<script...` regel die er al staat):
+Er staat al een geluidseffect in het project (`geluid/hap.mp3`), maar je kunt ook zelf een geluidseffect zoeken (in `.mp3` formaat) en het aan je project toevoegen met het plus-knopje.
 
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.js"></script>
-```
-
-Er staat al een geluidseffect in het project (`assets/hap.mp3`), maar je kunt ook zelf een geluidseffect zoeken (in `.mp3` formaat) en het aan je project toevoegen met het plus-knopje.
-
-Maak een nieuwe functie die `preload` heet en laad het geluidsbestand met `hap = loadSound('assets/hap.mp3')`. Gebruik dan in `draw()` de instructie `hap.play()` om het geluid af te spelen als de speler een dropje eet.
+Maak een nieuwe functie die `preload` heet en laad het geluidsbestand met `hap = loadSound('geluid/hap.mp3')`. Gebruik dan in `draw()` de instructie `hap.play()` om het geluid af te spelen als de speler een dropje eet.
 
 Let op: je hoort niets, totdat de speler een keer met de muis geklikt heeft! Probeer het spel dus zo aan te passen dat er eerst staat "Klik om te beginnen", en het spel pas echt begint als de speler met de muis geklikt heeft (gebruik `function mouseClicked() { ... }` om te weten wanneer de speler klikt).
 
-Je moet nu ook de tijdmeting aanpassen, want `millis()` meet vanaf het laden van de pagina, niet vanaf het moment dat de speler met de muis klikt.
+Je moet nu ook de tijdmeting aanpassen, want `millis()` meet vanaf het laden van de pagina, niet vanaf het moment dat de speler met de muis klikt. Zodra de speler de muis klikt, kun je natuurlijk de waarde van `millis()` in een variabele `beginTijd` opslaan, en die gebruiken om te berekenen hoe lang het spel al bezig is.
 
 Dit is misschien best lastig! Als je er niet uitkomt, vraag dan of een mentor wil meekijken.
+
+
+## Uitdaging: de hoogste score onthouden
+
+Zou het niet leuk zijn als de hoogste score onthouden werd, zelfs als je het spel over een tijdje nog eens speelt?
+
+De eerste stap is natuurlijk om de hoogste score bij te houden als je meerdere spelletjes achter elkaar speelt. Lukt het om dit toe te voegen?
+
+Om te zorgen dat de hoogste score bewaard blijft als je de browser sluit of de computer uitschakelt, moet deze worden bewaard. Dat kan met de functies `storeItem()` (bewaar iets) en `getItem()` (haal het weer op).
+
+Als iemand de `hoogsteScore` verbroken heeft, kun je de nieuwe hoogste score zo bewaren in de browser:
+
+```javascript
+storeItem('candyCraveHoogsteScore', hoogsteScore)
+```
+
+Wanneer het spel begint, kun je de hoogste score van vorige keer zo weer ophalen:
+
+```javascript
+hoogsteScore = getItem('candyCraveHoogsteScore') || 0
+```
+
+Die `|| 0` aan het eind ziet er een beetje gek uit misschien. Dat betekent: als er nog geen hoogste score bewaard was (bijvoorbeeld omdat iemand het spel voor het eerst speelt), gebruik dan 0 als beginwaarde.
+
+Lukt het nu om de hoogste score te onthouden?
 
 
 ## Lijst van functies, variabelen en termen
@@ -465,18 +487,24 @@ Wil je zelf op zoek naar meer functies (en kun je een beetje Engels)? Kijk dan [
 | `draw()`                 | Alles wat je in deze functie doet, wordt steeds opnieuw uitgevoerd |
 | `fill('blue')`           | Teken vormen met blauwe invulling                      |
 | `function`               | Gebruik je om een functie te maken: een stukje code dat 1 ding doet en dat je vanaf meerdere plekken in je code kunt uitvoeren |
+| `k = getItem('kleur')` | Haal een eerder bewaarde waarde met de naam `kleur` op uit de browser. Dit werkt natuurlijk alleen als je `kleur` eerder hebt bewaard met `storeItem('kleur', k)` |
 | `height`                 | Deze variabele is altijd gelijk aan de hoogte van het canvas |
 | `line(10, 20, 30, 40)`   | Tekent een lijn tussen de punten `10,20` en `30,40` |
+| `geluid = loadSound('geluid/hap.mp3')` | Laad een geluidsbestand (doe dit in de `preload` functie) |
 | `millis()`               | Hoe lang het programma al draait (in duizendsten van seconden; dus 2000 is 2 seconden) |
-| `mouseX`, `mouseY`       | De positie van de muiscursor (in pixels van links en van boven) |
+| `mouseClicked()`         | Wat je in deze functie zet, wordt telkens uitgevoerd als er op de pagina geklikt wordt.
+| `mouseX, mouseY`         | De positie van de muiscursor (in pixels van links en van boven) |
 | `noStroke()`             | Teken vormen zonder lijnen eromheen                    |
-| `noFill()`               | Teken vormen zonder invulling                          |
+| `noFill()`               | Teken vormen zonder invulling |
+| `geluid.play()`          | Speel het geluid af (je moet het `geluid` eerst laden met `loadSound()` in de `preload()` functie. Ook moet de speler eerst op de pagina geklikt hebben. |
+| `preload()`              | Deze functie wordt net als `setup()` 1x uitgevoerd. Je kunt in deze functie bijvoorbeeld geluidsbestanden inladen. |
 | `random(10, 20)`         | Kies een willekeurig getal tussen `10` en `20`. Dit kan ook een breukgetal worden! Als je een geheel getal wilt, gebruik dan `round()` om het af te ronden. |
 | `random(['hond', 'kat', 'konijn'])` | Kies een van de dieren uit de lijst. |
 | `rect(10, 20, 30, 40)`   | Teken een rechthoek met linkerbovenhoek `10,20` die `30` breed en `40` hoog is |
-| `resizeCanvas(windowWidth, windowHeight)`   | Maak het canvas weer zo groot als het venster (wordt meestal aangeroepen vanuit `function windowResized()`) |
+| `resizeCanvas(windowWidth, windowHeight)`   | Maak het canvas weer zo groot als het venster (wordt meestal aangeroepen vanuit `windowResized()`) |
 | `round(0.7)`             | Rond af op een geheel getal (`0.7` wordt afgerond op `1`; `0.3` zou worden afgerond op `0`) |
 | `setup()`                | Alles wat je in deze functie doet, wordt in het begin 1x uitgevoerd |
+| `storeItem('kleur', k)` | Bewaar de waarde van variabele `k` in de browser onder de naam `kleur`. Je kunt de waarde weer ophalen (ook pas volgende week!) met `getItem('kleur')` |
 | `stroke('red')`          | Gebruik rood als lijnkleur om vormen heen |
 | `strokeWeight(3)`         | Zet de lijndikte op 3 |
 | `text('Hallo', 50, 100)` | Schrijf `Hallo` op positie `50, 100`  |
@@ -484,7 +512,8 @@ Wil je zelf op zoek naar meer functies (en kun je een beetje Engels)? Kijk dan [
 | `textSize(10)`           | Zet tekstgrootte op 10                                 |
 | `triangle(0, 0, 10, 10, 0, 10)`  | Teken een driehoek met als hoekpunten `0,0`, `10,10` en `0,10` |
 | `width`                  | Deze variabele is altijd gelijk aan de breedte van het canvas |
-| `windowWidth/Height`     | Grootte van het venster (meestal gelijk aan canvasgrootte, `width/height`) |
+| `windowResized()`        | Wat je in deze functie zet, wordt uitgevoerd als het venster van grootte verandert. Meestal zorg je hier dat het canvas dan meeverandert. |
+| `windowWidth, windowHeight`     | Grootte van het venster (meestal gelijk aan canvasgrootte, `width/height`) |
 
 
 ## Tussenresultaten
@@ -497,3 +526,4 @@ Zit je een beetje vast, en ben je benieuwd hoe je het bijvoorbeeld kunt aanpakke
 - [Verschillende dropjes](5-verschillende-dropjes/script.js)
 - [Dropjes tellen](6-dropjes-tellen/script.js)
 - [Eet zo snel mogelijk](7-eet-zo-snel-mogelijk/script.js)
+- [Geluid](8-geluid/script.js)
