@@ -42,7 +42,7 @@ Begrijp je hoe dit programma werkt? Nee? Laten we kijken of we erachter kunnen k
 
 ### Probeer iets uit!
 
-Als je het programma verandert, zie je vanzelf hoe het werkt. Als je iets hebt veranderd, klik dan steeds op "Run" om het programma uit te voeren.
+Als je het programma verandert, zie je vanzelf hoe het werkt. Steeds als je iets hebt veranderd, moet je op "Run" klikken om het programma opnieuw uit te voeren.
 
 
 Wat je bijvoorbeeld kunt proberen:
@@ -61,7 +61,7 @@ Wat je bijvoorbeeld kunt proberen:
 
 Je begrijpt het programma nu een beetje. Laten we nu kijken of we de cirkel wat meer karakter kunnen geven, door ogen en een mond te tekenen.
 
-Natuurlijk kun jij er zelf van maken wat je leuk vindt, door bijvoorbeeld oortjes en snorharen toe te voegen, of hoorns, of een slurf.
+Natuurlijk kun jij er zelf van maken wat je leuk vindt, door bijvoorbeeld oortjes en snorharen toe te voegen, of hoorns, of een leuk hoedje.
 
 Maar eerst gaan we een functie (`function`) maken die ons gezicht tekent. Het is handig om (teken)opdrachten die bij elkaar horen in een functie te verzamelen; die kun je dan bijvoorbeeld meerdere keren uitvoeren, zoals we zometeen zullen doen.
 
@@ -179,7 +179,9 @@ function tekenDrop(x, y) {
 
 <img style="float: right; margin: 10px;" src="images/drop.png">
 
-We gebruiken hier de functie `rect(x, y, breedte, hoogte)` die een rechthoek tekent. Dit is maar 1 soort Engelse drop, maar verderop gaan we nog andere soorten toevoegen. Natuurlijk kun je nu al zelf een ander soort dropje tekenen als je wilt. Of heel iets anders.
+We gebruiken hier de functie `rect(x, y, breedte, hoogte)` die een rechthoek tekent.
+
+(Dit is maar 1 soort Engelse drop, maar verderop gaan we nog andere soorten toevoegen. Natuurlijk kun je nu al zelf een ander soort dropje tekenen als je wilt. Of heel iets anders.)
 
 Nu willen we dat het dropje op een willekeurige plek op het scherm verschijnt. Een willekeurig getal kiezen kan met de `random(min, max)` functie. Deze functie kiest een getal tussen de twee getallen die je opgeeft.
 
@@ -191,7 +193,7 @@ Zet deze regels aan het eind van de `setup()` functie (maar wel binnen de `{ }`)
   dropY = random(25, height - 25)
 ```
 
-We kiezen een positie voor het dropje door twee getallen te kiezen: `dropX`, het aantal pixels (schermpunten) van links, en `dropY`, het aantal pixels van boven. We gebruiken hierbij `width` en `height`; dit staat voor de breedte en hoogte van ons venster. Zo zorgen we dat het dropje niet buiten het venster terechtkomt.
+We kiezen een plaats voor het dropje door twee getallen te kiezen: `dropX`, het aantal pixels (schermpunten) van links, en `dropY`, het aantal pixels van boven. We gebruiken hierbij `width` en `height`; dit staat voor de breedte en hoogte van ons venster. Zo zorgen we dat het dropje niet buiten het venster terechtkomt.
 
 Natuurlijk moeten we het dropje wel tekenen, anders zien we niets. Zet deze regel aan het eind van de `draw()` functie:
 
