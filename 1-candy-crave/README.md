@@ -243,14 +243,14 @@ Kun jij een functie `maakDropje()` maken en die in zowel `setup` als in `draw` a
 <details>
   <summary>HINT</summary>
   <p>Zo ziet de functie er uit:</p>
-  <code>
-  // -----------------------------<br><br>
-  function maakDropje() {<br>
-  &nbsp;&nbsp;dropX = random(25, width - 25)<br>
-  &nbsp;&nbsp;dropY = random(75, height - 25)<br>
-  } // einde van maakDropje()<br><br>
-  // -----------------------------<br>
-  </code>
+  <pre class='highlight'><code>// -----------------------------
+
+function maakDropje() {
+  dropX = random(25, width - 25)
+  dropY = random(75, height - 25)
+} // einde van maakDropje()
+
+// -----------------------------</code></pre>
   <p>Voeg deze functie toe onder de <code>draw()</code> functie en roep 'm aan vanuit <code>setup()</code> en <code>draw()</code>.</p>
 </details>
 
