@@ -11,7 +11,7 @@ Er zijn twee manieren om het voorbeeldproject te openen en aan de slag te gaan.
 
 ### Bewerken in de browser (Replit)
 
-De makkelijkste manier is om het project te [openen op replit.com](https://replit.com/@JanNiestadt/Creatief-Coderen-1-Candy-Crave#script.js).
+De makkelijkste manier is om het project te <a target="_blank" href="https://replit.com/@JanNiestadt/Creatief-Coderen-1-Candy-Crave#script.js">openen op replit.com</a>.
 
 Je hebt hiervoor wel een (gratis) account nodig. Als je die nog niet hebt: klik op **Sign up** (inschrijven) rechtsboven. Je moet dan een gebruikersnaam en een wachtwoord kiezen en je e-mailadres opgeven. Je ontvangt een mailtje en moet klikken op een link in dat mailtje om je account te activeren.
 
