@@ -1,6 +1,6 @@
 # Candy Crave
 
-JavaScript is een programmeertaal die vooral door websites gebruikt wordt. Het is een van de populairste programmeertalen ter wereld.
+JavaScript is een van de populairste programmeertalen ter wereld.
 
 Je kunt van alles met JavaScript-code, maar vandaag gaan we leren hoe je een simpel spelletje kunt maken.
 
@@ -9,18 +9,20 @@ Je kunt van alles met JavaScript-code, maar vandaag gaan we leren hoe je een sim
 
 Er zijn twee manieren om het voorbeeldproject te openen en aan de slag te gaan.
 
-### Bewerken in de browser (Replit)
+### Manier 1: bewerken in de browser (Replit)
 
-De makkelijkste manier is om het project te <a target="_blank" href="https://replit.com/@JanNiestadt/Creatief-Coderen-1-Candy-Crave#script.js">openen op replit.com</a>.
+De makkelijkste manier is op de website Replit. Je hebt hiervoor wel een (gratis) account nodig.
 
-Je hebt hiervoor wel een (gratis) account nodig. Als je die nog niet hebt: klik op **Sign up** (inschrijven) rechtsboven. Je moet dan een gebruikersnaam en een wachtwoord kiezen en je e-mailadres opgeven. Je ontvangt een mailtje en moet klikken op een link in dat mailtje om je account te activeren.
+Heb je nog geen account? Klik op **Sign up** (inschrijven) rechtsboven. Je moet dan een gebruikersnaam en een wachtwoord kiezen en je e-mailadres opgeven. Je ontvangt een mailtje en moet klikken op een link in dat mailtje om je account te activeren.
 
-Als je ingelogd bent, klik dan op de blauwe **Fork repl** knop rechtsboven. Je kunt nu zelf aan de slag in een kopie van het voorbeeldproject.
+Als je een account hebt en ingelogd bent, kun je het project <a target="_blank" href="https://replit.com/@JanNiestadt/Creatief-Coderen-1-Candy-Crave#script.js">openen</a>.
 
-Wanneer je het programma wilt uitvoeren klik je op de groene knop **Run** (uitvoeren) bovenin het scherm.
+Klik nu op de blauwe knop met de tekst **Fork repl** rechtsboven. Je kunt nu zelf aan de slag in een kopie van het voorbeeldproject.
+
+Als je iets wijzigt, kun je het programma uitvoeren door op groene knop **Run** (uitvoeren) bovenin te klikken.
 
 
-### Bewerken met een teksteditor zoals Kladblok
+### Manier 2: Bewerken met een teksteditor zoals Kladblok
 
 Als je geen account kunt of wilt maken op replit.com, kun je ook gewoon in een teksteditor zoals Kladblok of <a target="_blank" href="https://notepad-plus-plus.org/downloads/">Notepad++</a> werken.
 
@@ -31,7 +33,9 @@ Elke keer als je een wijzing maakt, sla het het script op (<kbd>Ctrl+S</kbd>), g
 
 ## Je eerste JavaScript-programma
 
-Bekijk het bestand `script.js` en voer het uit (klik op de Run knop). Beweeg de muiscursor over het venster. Als het goed is, zie je een groene cirkel die de muiscursor volgt.
+<img style="float: right; margin: 10px;" src="images/start.png">
+
+Bekijk het bestandje `script.js` en voer het uit (klik op de **Run** knop). Beweeg de muiscursor over het venster. Als het goed is, zie je een groene cirkel die de muiscursor volgt.
 
 Begrijp je hoe dit programma werkt? Nee? Laten we kijken of we erachter kunnen komen. Verderop vind je ook een lijst waarin alle termen staan uitgelegd.
 
@@ -112,6 +116,8 @@ function draw() {
 //---------------------------
 ```
 
+<img style="float: right; margin: 10px;" src="images/smiley.png">
+
 We stoppen de positie van de muiscursor, `mouseX` en `mouseY`, in onze functie `tekenSmiley`. De waardes die een functie meekrijgt heten ook wel *parameters*.
 
 Probeer het programma uit. Zie je de smiley? Begrijp je hoe deze getekend wordt?
@@ -170,6 +176,8 @@ function tekenDrop(x, y) {
 
 // ---------------------------
 ```
+
+<img style="float: right; margin: 10px;" src="images/drop.png">
 
 We gebruiken hier de functie `rect(x, y, breedte, hoogte)` die een rechthoek tekent. Dit is maar 1 soort Engelse drop, maar verderop gaan we nog andere soorten toevoegen. Natuurlijk kun je nu al zelf een ander soort dropje tekenen als je wilt. Of heel iets anders.
 
@@ -255,6 +263,8 @@ function maakDropje() {
 </details>
 
 ## Instructies tonen
+
+<img style="float: right; margin: 10px;" src="images/tekst.png">
 
 Laten we verder bovenin het venster een boodschap tonen, zodat spelers weten wat de bedoeling is.
 
@@ -355,6 +365,8 @@ Zodra je een dropje eet, moeten we `aantalGegeten` verhogen en de tekst bijwerke
     tekstBovenaan = aantalGegeten + ' dropjes gegeten!'
 ```
 
+<img style="float: right; margin: 10px;" src="images/tellen.png">
+
 Als je 1 dropje gegeten hebt, staat er toch "dropje**s**", terwijl het er maar 1 is. Als je wilt, kun je in dat geval een andere tekst tonen, bijvoorbeeld "Lekker dropje, zijn er nog meer?". Dit kun je doen door een `if` instructie toe te voegen na de twee regels hierboven. Als je het leuk vindt, kun je natuurlijk nog meer `if` instructies gebruiken om andere teksten te tonen wanneer je 2, 3, of nog meer dropjes gegeten hebt.
 
 
@@ -423,6 +435,8 @@ Zie je wat we gedaan hebben? We hebben het opeten van het dropje en het tekenen 
 Kijk wel uit dat de code die we binnen de `if`-opdracht hebben toegevoegd nu niet twee keer in je programma staat. Verwijder deze code dus buiten de `if`-opdracht.
 
 Probeer het maar uit. Werkt het nu helemaal goed?
+
+<img style="float: right; margin: 10px;" src="images/gefeliciteerd.png">
 
 Kun je zelf nog varianten op het spel bedenken? Bijvoorbeeld een vies snoepje dat je juist niet moet pakken. Of iets heel anders natuurlijk.
 
