@@ -1,6 +1,6 @@
 # Creatief Coderen in Javascript
 
-Met JavaScript kun je van alles maken: flitsende websites, grafische effecten en natuurlijk ook games.
+Met JavaScript kun je van alles maken: flitsende websites, grafische effecten en natuurlijk ook games!
 
 ## Beginner
 

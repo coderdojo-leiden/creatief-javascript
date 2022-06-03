@@ -1,4 +1,4 @@
-# Candy Crave (Creatief Coderen in JavaScript)
+# Candy Crave
 
 JavaScript is een programmeertaal die vooral door websites gebruikt wordt. Het is een van de populairste programmeertalen ter wereld.
 
