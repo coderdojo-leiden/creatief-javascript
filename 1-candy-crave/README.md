@@ -26,7 +26,7 @@ Als je geen account kunt of wilt maken op replit.com, kun je ook gewoon in een t
 
 [Download](./1-cirkel-volgt-muis/candy-crave-project.zip) het voorbeeldproject, pak het zipbestand uit op een handige plaats (bijvoorbeeld het bureaublad) en open `index.html` in de browser. Om het programma te bewerken, open je `script.js` in je teksteditor.
 
-Elke keer als je een wijzing maakt, sla het het script op (Ctrl+S), ga je naar de browser en herlaad je de pagina.
+Elke keer als je een wijzing maakt, sla het het script op (<kbd>Ctrl+S</kbd>), ga je naar de browser en herlaad je de pagina (<kbd>F5</kbd>).
 
 
 ## Je eerste JavaScript-programma
@@ -38,7 +38,7 @@ Begrijp je hoe dit programma werkt? Nee? Laten we kijken of we erachter kunnen k
 
 ### Probeer iets uit!
 
-Als je het programma verandert, zie je vanzelf hoe het werkt. Als je iets hebt veranderd, druk dan steeds op "Run" om het programma uit te voeren.
+Als je het programma verandert, zie je vanzelf hoe het werkt. Als je iets hebt veranderd, klik dan steeds op "Run" om het programma uit te voeren.
 
 
 Wat je bijvoorbeeld kunt proberen:
@@ -50,7 +50,7 @@ Wat je bijvoorbeeld kunt proberen:
 - Werkt het programma nog als je `mouseX` verandert in `mousex` (dus met een kleine letter `x`)?
 - Wat kun je zelf nog bedenken om te veranderen aan het programma?
 
-**Foutje?** Als iets ongedaan wilt maken, gebruik dan Ctrl+Z (houd Ctrl ingedrukt en druk (een paar keer) op Z).
+**Foutje?** Als iets ongedaan wilt maken, gebruik dan <kbd>Ctrl+Z</kbd> (houd <kbd>Ctrl</kbd> ingedrukt en druk (een paar keer) op <kbd>Z</kbd>).
 
 
 ## Meer tekenen
@@ -63,7 +63,7 @@ Maar eerst gaan we een functie (`function`) maken die ons gezicht tekent. Het is
 
 Voeg onderstaande code toe, helemaal onderaan je programma.
 
-> **TIP:** Gebruik kopieren en plakken om code over te nemen: selecteer de code die je wilt overnemen met de muis, druk dan Ctrl+C (kopieren), klik dan in je programma op de plek waar je de code wilt hebben en druk Ctrl+V (plakken).
+> **TIP:** Gebruik kopieren en plakken om code over te nemen: selecteer de code die je wilt overnemen met de muis, druk dan <kbd>Ctrl+C</kbd> (kopieren), klik dan in je programma op de plek waar je de code wilt hebben en druk <kbd>Ctrl+V</kbd> (plakken).
 
 ```javascript
 // ---------------------------

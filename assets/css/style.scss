@@ -3,8 +3,23 @@
 
 @import "{{ site.theme }}";
 
+table {
+  border-color: #c4c4c4;
+}
+
+td, th {
+  padding: 0.4em;
+  vertical-align: top;
+  border-color: #c4c4c4;
+
+  code {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+  
 // Codefragmenten
 pre.highlight {
-    border-color: #c4c4c4;
-    background-color: #fff;
+  border-color: #c4c4c4;
+  background-color: #fff;
 }
