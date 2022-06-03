@@ -22,7 +22,7 @@ Wanneer je het programma wilt uitvoeren klik je op de groene knop **Run** (uitvo
 
 ### Bewerken met een teksteditor zoals Kladblok
 
-Als je geen account kunt of wilt maken op replit.com, kun je ook gewoon in een teksteditor zoals Kladblok of [Notepad++](https://notepad-plus-plus.org/downloads/) werken.
+Als je geen account kunt of wilt maken op replit.com, kun je ook gewoon in een teksteditor zoals Kladblok of <a target="_blank" href="https://notepad-plus-plus.org/downloads/">Notepad++</a> werken.
 
 [Download](./1-cirkel-volgt-muis/candy-crave-project.zip) het voorbeeldproject, pak het zipbestand uit op een handige plaats (bijvoorbeeld het bureaublad) en open `index.html` in de browser. Om het programma te bewerken, open je `script.js` in je teksteditor.
 
@@ -44,7 +44,7 @@ Als je het programma verandert, zie je vanzelf hoe het werkt. Als je iets hebt v
 Wat je bijvoorbeeld kunt proberen:
 - Zet twee schuine strepen `//` voor een van de regels, dus bijvoorbeeld: `//noStroke()`. De regel wordt grijs. Klik nu weer op Run.<br>Wat is er anders geworden? Probeer dit ook bij andere regels. Wat denk je dat `//` aan het begin van de regel doet?
 - Probeer andere getallen bij `textSize(20)` of `circle(mouseX, mouseY, 140)`.
-- Probeer andere kleuren bij `background('gray')`, of de regels met `fill(...)`, bijvoorbeeld `'purple'` (paars) of `'green'` (groen). Meer (Engelse) kleurnamen vind je [hier](https://www.w3schools.com/tags/ref_colornames.asp).
+- Probeer andere kleuren bij `background('gray')`, of de regels met `fill(...)`, bijvoorbeeld `'purple'` (paars) of `'green'` (groen). Meer (Engelse) kleurnamen vind je <a target="_blank" href="https://www.w3schools.com/tags/ref_colornames.asp">hier</a>.
 - Maak van `mouseY` eens `mouseY - 50` of `mouseY + 50`. Wat gebeurt er nu? En wat als je `(mouseX, mouseY)` vervangt door `(width-mouseX, height-mouseY)`?
 - Wat gebeurt er als je `mouseX` weghaalt en vervangt door alleen een getal, bijvoorbeeld `200`? Probeer dit ook met `mouseY`. Wat denk je dat `mouseX` en `mouseY` betekenen?
 - Werkt het programma nog als je `mouseX` verandert in `mousex` (dus met een kleine letter `x`)?
