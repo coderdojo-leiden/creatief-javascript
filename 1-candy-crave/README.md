@@ -13,7 +13,7 @@ Er zijn twee manieren om het voorbeeldproject te openen en aan de slag te gaan.
 
 De makkelijkste manier is op de website Replit. Je hebt hiervoor wel een (gratis) account nodig.
 
-Heb je nog geen account? Klik op **Sign up** (inschrijven) rechtsboven. Je moet dan een gebruikersnaam en een wachtwoord kiezen en je e-mailadres opgeven. Je ontvangt een mailtje en moet klikken op een link in dat mailtje om je account te activeren.
+> Heb je nog geen account? Klik op **Sign up** (inschrijven) rechtsboven. Je moet dan een gebruikersnaam en een wachtwoord kiezen en je e-mailadres opgeven. Je ontvangt een mailtje en moet klikken op een link in dat mailtje om je account te activeren.
 
 Als je een account hebt en ingelogd bent, kun je het project <a target="_blank" href="https://replit.com/@JanNiestadt/Creatief-Coderen-1-Candy-Crave#script.js">openen</a>.
 
