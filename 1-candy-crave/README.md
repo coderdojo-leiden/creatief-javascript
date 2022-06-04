@@ -59,9 +59,7 @@ Wat je bijvoorbeeld kunt proberen:
 
 ## Meer tekenen
 
-Je begrijpt het programma nu een beetje. Laten we nu kijken of we de cirkel wat meer karakter kunnen geven, door ogen en een mond te tekenen.
-
-Natuurlijk kun jij er zelf van maken wat je leuk vindt, door bijvoorbeeld oortjes en snorharen toe te voegen, of hoorns, of een leuk hoedje.
+Je begrijpt het programma nu een beetje. Laten we nu kijken of we de cirkel wat meer karakter kunnen geven, door ogen en een mond te tekenen. Straks kun je die zelf aanpassen als je wilt.
 
 Maar eerst gaan we een functie (`function`) maken die ons gezicht tekent. Het is handig om (teken)opdrachten die bij elkaar horen in een functie te verzamelen; die kun je dan bijvoorbeeld meerdere keren uitvoeren, zoals we zometeen zullen doen.
 
@@ -101,7 +99,7 @@ function tekenSmiley(x, y) {
 
 We hebben nu een nieuwe functie die een smiley tekent, maar we moeten die ook nog gebruiken. Dat noemen we *aanroepen*.
 
-Pas de functie `draw()` aan zodat die de `tekenSmiley` functie aanroept:
+Pas de functie `draw()` aan zodat die de `tekenSmiley()` functie aanroept:
 
 ```javascript
 //---------------------------
@@ -127,9 +125,9 @@ Probeer het programma uit. Zie je de smiley? Begrijp je hoe deze getekend wordt?
 Probeer te veranderen hoe het gezichtje getekend wordt:
 
 - Wat doen `stroke` en `strokeWeight` denk je? Pas de kleurnaam en de getallen eens aan, klik "Run" en kijk wat er verandert.
-- Wat doet de `arc` functie? Waarom staat er `noFill()` vlak voor de `arc` functie gebruikt wordt? Wat als je `noFill()` wijzigt in `fill('white ')`? Wijzig ook eens de laatste twee parameters (`0, 180`) eens en kijk wat er gebeurt.
+- Wat doet de `arc` functie? Waarom staat er `noFill()` vlak voor de `arc` functie gebruikt wordt? Wat als je `noFill()` wijzigt in `fill('white')`? Wijzig ook eens de laatste twee parameters `0` en `180` eens en kijk wat er gebeurt.
 - Hoe worden de ogen getekend? Waarvoor dienen de 4 regels die de variabelen `oogLinks`, `oogRechts`, etc. zetten? Ze worden weer gebruikt in de twee `line` regels; begrijp je hoe het werkt? Kun je de ogen verder uit elkaar zetten? Of er cirkeltjes van maken?
-- Wat wil jij nog veranderen aan het gezicht? Een neus, andere ogen, oren, snorharen of een hoedje?<br>**TIP:** Als je een driehoek wilt tekenen, gebruik dan <nobr><code>triangle(x, y, x + 10, y + 10, x - 10, y + 10)</code></nobr><br>Zet wel eerst een andere `fill('kleur')`, anders zie je de driehoek misschien niet tegen de achtergrond.
+- Wat wil jij nog veranderen aan het gezicht? Een neus, andere ogen, oren, snorharen, hoorntjes of een hoedje?<br>**TIP:** je kunt ook de functie <nobr><code>triangle( x,y, x+10,y+10, x-10,y+10 )</code></nobr> gebruiken, die een driehoek tekent. Zet wel eerst een andere `fill('kleur')`, anders zie je de driehoek misschien niet tegen de achtergrond.
 
 Pas de functie `draw()` nu nog eens aan:
 
@@ -289,7 +287,7 @@ Stel dat we 2 soorten Engelse drop willen. Voeg twee regels toe aan de `maakDrop
 
 ```javascript
   soortenDrop = ['zwart met wit', 'laagjes']
-  dropSoort = random(soortenDrop) // kies een van de drie opties
+  dropSoort = random(soortenDrop) // kies een van de soorten drop
 ```
 
 Op de eerste regel geef je een lijst van 2 soorten dropjes. Op de tweede regel kies je een willekeurige soort uit die lijst.<br><small>(In latere opdrachten zullen we veel meer met lijsten gaan doen)</small>
