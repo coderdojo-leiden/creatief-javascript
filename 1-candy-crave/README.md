@@ -536,6 +536,7 @@ Wil je zelf op zoek naar meer functies (en kun je een beetje Engels)? Kijk dan [
 
 Zit je een beetje vast, en ben je benieuwd hoe je het bijvoorbeeld kunt aanpakken? Hier zijn een aantal tussenresultaten die je kunt gebruiken:
 
+- [Startproject](1-cirkel-volgt-muis/script.js)
 - [Smiley](2-smiley/script.js)
 - [Dropjes](3-dropjes/scripts.js)
 - [Dropjes eten](4-dropjes-eten/script.js)
