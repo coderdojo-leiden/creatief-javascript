@@ -6,7 +6,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight)
   angleMode(DEGREES) // hoeken in graden
 
-} // einde van setup()
+}
 
 //--------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ function draw() {
 
   tekenSmiley(mouseX, mouseY)
 
-} // einde van draw()
+}
 
 //--------------------------------------------------------------------
 
@@ -43,7 +43,7 @@ function tekenSmiley(x, y) {
   line(oogLinks, oogBoven, oogLinks, oogOnder)
   line(oogRechts, oogBoven, oogRechts, oogOnder)
 
-} // einde van tekenSmiley()
+}
 
 //--------------------------------------------------------------------
 
@@ -52,5 +52,5 @@ function windowResized() {
   // ...verander dan ons canvas mee!
   resizeCanvas(windowWidth, windowHeight)
 
-} // einde van windowResized()
+}
 

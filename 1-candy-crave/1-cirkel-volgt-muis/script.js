@@ -6,7 +6,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight)
   angleMode(DEGREES) // hoeken in graden
 
-} // einde van setup()
+}
 
 //--------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ function draw() {
   fill('lightgreen')
   circle(mouseX, mouseY, 140)
 
-} // einde van draw()
+}
 
 //--------------------------------------------------------------------
 
@@ -28,5 +28,5 @@ function windowResized() {
   // ...verander dan ons canvas mee!
   resizeCanvas(windowWidth, windowHeight)
 
-} // einde van windowResized()
+}
 

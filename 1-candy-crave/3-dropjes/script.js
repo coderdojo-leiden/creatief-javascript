@@ -10,7 +10,7 @@ function setup() {
   dropX = random(25, width - 25)  // kies getal tussen deze twee getallen
   dropY = random(25, height - 25)
 
-} // einde van setup()
+}
 
 //--------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ function draw() {
 
   tekenSmiley(mouseX, mouseY)
 
-} // einde van draw()
+}
 
 //--------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ function tekenDrop(x, y) {
   fill('yellow')
   rect(x - 25, y - 5, 50, 10)
 
-} // einde van tekenDrop()
+}
 
 //--------------------------------------------------------------------
 
@@ -65,7 +65,7 @@ function tekenSmiley(x, y) {
   line(oogLinks, oogBoven, oogLinks, oogOnder)
   line(oogRechts, oogBoven, oogRechts, oogOnder)
 
-} // einde van tekenSmiley()
+}
 
 //--------------------------------------------------------------------
 
@@ -74,5 +74,5 @@ function windowResized() {
   // ...verander dan ons canvas mee!
   resizeCanvas(windowWidth, windowHeight)
 
-} // einde van windowResized()
+}
 

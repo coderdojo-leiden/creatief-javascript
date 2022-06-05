@@ -92,7 +92,7 @@ function tekenSmiley(x, y) {
   line(oogLinks, oogBoven, oogLinks, oogOnder)
   line(oogRechts, oogBoven, oogRechts, oogOnder)
 
-} // einde van tekenSmiley()
+}
 
 // ---------------------------
 ```
@@ -109,7 +109,7 @@ function draw() {
   background(240)
   tekenSmiley(mouseX, mouseY)
 
-} // einde van draw()
+}
 
 //---------------------------
 ```
@@ -141,7 +141,7 @@ function draw() {
   tekenSmiley(mouseX + 140, mouseY)
   tekenSmiley(mouseX, mouseY - 140)
 
-} // einde van draw()
+}
 
 //---------------------------
 ```
@@ -170,7 +170,7 @@ function tekenDrop(x, y) {
   rect(x - 25, y + 5, 50, 10)
   fill('yellow')
   rect(x - 25, y - 5, 50, 10)
-} // einde van tekenDrop()
+}
 
 // ---------------------------
 ```
@@ -256,7 +256,7 @@ Kun jij een functie `maakDropje()` maken en die in zowel `setup` als in `draw` a
 function maakDropje() {
   dropX = random(25, width - 25)
   dropY = random(75, height - 25)
-} // einde van maakDropje()
+}
 
 // -----------------------------</code></pre>
   <p>Voeg deze functie toe onder de <code>draw()</code> functie en roep 'm aan vanuit <code>setup()</code> en <code>draw()</code>.</p>
@@ -323,7 +323,7 @@ function tekenDrop(x, y, soort) {
     rect(x - 25, y - 5, 50, 10)
   }
 
-} // einde van tekenDrop()
+}
 
 //---------------------------------
 ```
