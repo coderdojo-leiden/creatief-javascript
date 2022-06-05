@@ -251,7 +251,7 @@ Kun jij een functie `maakDropje()` maken en die in zowel `setup` als in `draw` a
 <details>
   <summary>HINT</summary>
   <p>Zo ziet de functie er uit:</p>
-  <pre class='highlight'><code>// -----------------------------
+  <pre lang='javascript'><code>// -----------------------------
 
 function maakDropje() {
   dropX = random(25, width - 25)
