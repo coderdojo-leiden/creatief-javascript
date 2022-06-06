@@ -47,7 +47,6 @@ Als je het programma verandert, zie je vanzelf hoe het werkt. Steeds als je iets
 
 Wat je bijvoorbeeld kunt proberen:
 - Zet twee schuine strepen `//` voor een van de regels, dus bijvoorbeeld: `//noStroke()`. De regel wordt grijs. Klik nu weer op Run.<br>Wat is er anders geworden? Probeer dit ook bij andere regels. Wat denk je dat `//` aan het begin van de regel doet?
-- Probeer andere getallen bij `textSize(20)` of `circle(mouseX, mouseY, 140)`.
 - Probeer andere kleuren bij `background('gray')`, of de regels met `fill(...)`, bijvoorbeeld `'purple'` (paars) of `'green'` (groen). Meer (Engelse) kleurnamen vind je <a target="_blank" href="https://www.w3schools.com/tags/ref_colornames.asp">hier</a>.
 - Maak van `mouseY` eens `mouseY - 50` of `mouseY + 50`. Wat gebeurt er nu? En wat als je `(mouseX, mouseY)` vervangt door `(width-mouseX, height-mouseY)`?
 - Wat gebeurt er als je `mouseX` weghaalt en vervangt door alleen een getal, bijvoorbeeld `200`? Probeer dit ook met `mouseY`. Wat denk je dat `mouseX` en `mouseY` betekenen?
