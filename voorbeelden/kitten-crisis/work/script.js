@@ -130,6 +130,7 @@ function doeDruppels() {
   textSize(50)
   textFont('Arial')
   
+  actieveDruppels = []
   for (druppel of druppels) {
     tekenDruppel(druppel)
     
@@ -152,11 +153,6 @@ function doeDruppels() {
         }
       }
     }
-  }
-
-  // Verwijder alle niet-actieve druppels
-  actieveDruppels = []
-  for (druppel in druppels) {
     if (druppel.actief) {
       actieveDruppels.push(druppel)
     }
