@@ -1,7 +1,7 @@
 
-## Leertraject
+# Leertraject
 
-### Beginner
+## Beginner
 
 - [Candy Crave](./1-candy-crave/)<br>
   Eerste kennismaking met JavaScript/P5.
@@ -11,15 +11,22 @@
   - If
   - Strings
 
-### Voorbeelden
+## Voorbeelden
 
 (nog uit te werken tot een complete opdracht)
 
-- [Flashy Fireworks](./fireworks/)<br>
+- [Flashy Fireworks](voorbeelden/flashy-fireworks/)<br>
   - Arrays
 
-### Geavanceerd
+## Geavanceerd
 
-- [Twisty Trees](./twisty-trees/)
+- [Twisty Trees](voorbeelden/twisty-trees/)
   - Recursie
   - Fractals (boom van Pythagoras)
+
+
+## TEST EMBED
+
+Embedded Repl:
+
+<iframe frameborder="0" width="100%" height="500px" src="[REPL_URL?QUERY_PARAMETERS](https://replit.com/@JanNiestadt/Creatief-Coderen-Twisty-Trees)"></iframe>
