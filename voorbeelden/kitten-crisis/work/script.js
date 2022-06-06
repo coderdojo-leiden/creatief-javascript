@@ -109,6 +109,7 @@ function tekenAchtergrond() {
   noStroke()
   fill('white')
   textSize(60)
+  textAlign(CENTER, TOP)
   textFont(letterTypeLemonJelly)
   text('Kitten Crisis', width / 2, 10)
 
