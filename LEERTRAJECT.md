@@ -29,4 +29,4 @@
 
 Embedded Repl:
 
-<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@JanNiestadt/Creatief-Coderen-Twisty-Trees"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@JanNiestadt/Creatief-Coderen-Twisty-Trees?embed=true"></iframe>
