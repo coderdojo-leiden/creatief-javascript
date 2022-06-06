@@ -34,7 +34,7 @@ Deze korte voorbeelden laten steeds iets belangrijks van JavaScript zien.
 - **[lijst](taalelementen/array): om een lijst waardes bij te houden**<br>
   Als je een veel dezelfde soort dingen wilt bijhouden, zoals de positie en snelheid van sterren, komen lijsten van pas.<br><br>
 
-## Voorbeeldproject
+## Voorbeeldprojecten
 
 Kijk eens of je dit programma begrijpt! Vraag een mentor als iets niet duidelijk is.
 
@@ -42,11 +42,12 @@ Kijk eens of je dit programma begrijpt! Vraag een mentor als iets niet duidelijk
   Veelkleurige vuurpijlen ontploffen in een spectaculaire show!<br>
   Je leert wat je kunt bereiken met lijsten.
 
-
-## Geavanceerd
-
-Een extra ingewikkeld programma voor wie het leuk vindt. De mentoren kunnen je er meer over vertellen.
+- [Kitten Crisis](voorbeelden/kitten-crisis/)<br>
+  Fluffy en haar broertjes lopen gevaar... om nat te worden!
+  Alleen als jij snel genoeg kunt typen, blijven de schattige kittens droog!<br>
+  Je leert over lijsten en objecten.
 
 - [Twisty Trees](voorbeelden/twisty-trees/)<br>
+  Een extra ingewikkeld programma voor wie het leuk vindt. De mentoren kunnen je er meer over vertellen.<br>
   Bomen tekenen door takken telkens verder te splitsen.<br>
   Je leert over functies die zichzelf aanroepen (recursie)
