@@ -1,6 +1,10 @@
-# JavaScript voor Scratch gebruikers
+[Creatief Coderen](../) » Vergelijk Scratch met JavaScript
 
-Links zie je Scratch-blokjes en rechts hoe je hetzelfde doet in JavaScript (met de [P5](https://p5js.org/) uitbreiding die wij gebruiken).
+# Vergelijk Scratch met JavaScript
+
+Links zie je Scratch-blokjes en rechts hoe je hetzelfde doet in JavaScript.
+
+<small>(voor sommige dingen zoals tekenen, muis en toetsenbord gebruiken we de [P5](https://p5js.org/) hulpfuncties).</small>
 
 <table class='scratch'>
     <tr>

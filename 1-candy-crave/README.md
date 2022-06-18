@@ -1,3 +1,5 @@
+[Creatief Coderen](../) » Candy Crave
+
 # Candy Crave
 
 JavaScript is een van de populairste programmeertalen ter wereld.
@@ -38,6 +40,8 @@ Elke keer als je een wijzing maakt, sla het het script op (<kbd>Ctrl+S</kbd>), g
 Bekijk het bestandje `script.js` en voer het uit (klik op de **Run** knop). Beweeg de muiscursor over het venster. Als het goed is, zie je een groene cirkel die de muiscursor volgt.
 
 Begrijp je hoe dit programma werkt? Nee? Laten we kijken of we erachter kunnen komen. Verderop vind je ook een lijst waarin alle termen staan uitgelegd.
+
+> TIP: heb je met Scratch gewerkt? Kijk dan eens naar deze <a target="_blank" href="../vergelijk-met-scratch/">vergelijkingstabel</a> tussen Scratch-blokken en JavaScript-code.
 
 
 ### Probeer iets uit!

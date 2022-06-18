@@ -22,6 +22,8 @@ Ken je Scratch en wil je JavaScript leren? Kijk dan eens naar de [vertaaltabel](
 
 Deze korte voorbeelden laten steeds iets belangrijks van JavaScript zien.
 
+Om de JavaScript-code te bekijken: druk <kbd>Ctrl+U</kbd> (Bron weergeven) en klik op `script.js`.
+
 - **[variabele](taalelementen/var): om een waarde te onthouden**<br>
   Een variabele is een soort 'doosje' waarin je een waarde (een getal, stukje tekst, etc.) kunt bewaren. Hier gebruiken we er bijvoorbeeld een om te tellen hoe vaak je klikt.<br><br>
 - **[`if/else`](taalelementen/if): om te beslissen wat er moet gebeuren**<br>
@@ -36,7 +38,7 @@ Deze korte voorbeelden laten steeds iets belangrijks van JavaScript zien.
 
 ## Voorbeeldprojecten
 
-Kijk eens of je dit programma begrijpt! Vraag een mentor als iets niet duidelijk is.
+Kijk eens of je deze programma's begrijpt, en of je er zelf iets aan kunt veranderen!
 
 - [Flashy Fireworks](voorbeelden/flashy-fireworks/)<br>
   Veelkleurige vuurpijlen ontploffen in een spectaculaire show!<br>
@@ -50,4 +52,4 @@ Kijk eens of je dit programma begrijpt! Vraag een mentor als iets niet duidelijk
 - [Twisty Trees](voorbeelden/twisty-trees/)<br>
   Een extra ingewikkeld programma voor wie het leuk vindt. De mentoren kunnen je er meer over vertellen.<br>
   Bomen tekenen door takken telkens verder te splitsen.<br>
-  Je leert over functies die zichzelf aanroepen (recursie)
+  Je leert over functies die zichzelf aanroepen (recursie).

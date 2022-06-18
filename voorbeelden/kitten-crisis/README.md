@@ -4,6 +4,12 @@ Fluffy en haar broertjes lopen gevaar... om nat te worden!
 
 Gelukkig heb je een oude typmachine met laserstralen uitgerust. Als je snel genoeg de juiste letters typt, blijven de schattige kittens droog!
 
+Dit project gebruikt behalve lijsten ook *objecten*. In een object hou je alle informatie bij over bijvoorbeeld een kitten of een regendruppel.
+
+- <a target="_blank" href="https://replit.com/@JanNiestadt/Creatief-Coderen-Kitten-Crisis#script.js">Open project op replit.com</a> (klik op "Fork repl" om het te bewerken)
+- <a href="kitten-crisis-project.zip">Download project</a>
+- <a href="work/">Bekijk project in de browser</a>
+
 
 
 ## Met dank aan...
