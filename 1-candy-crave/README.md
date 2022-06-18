@@ -455,6 +455,8 @@ Je moet nu ook de tijdmeting aanpassen, want `millis()` meet vanaf het laden van
 
 Dit is misschien best lastig! Als je er niet uitkomt, vraag dan of een mentor wil meekijken.
 
+> **LET OP:** werk je niet via replit.com maar lokaal? Dan kan het zijn dat het geluid niet werkt. Je kunt proberen om de extensie [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) te installeren. Klik op de app om hem te starten en kies bij "Choose Folder" de map met jouw bestanden. Je kunt nu testen door naar het webadres http://127.0.0.1:8887 te gaan.
+
 
 ## Uitdaging: de hoogste score onthouden
 
