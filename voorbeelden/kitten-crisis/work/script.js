@@ -4,12 +4,13 @@
 // Een aantal vaste waardes
 
 // Hoe snel komen de druppels (in het begin)?
+// (aantal seconden; hoe lager, hoe sneller de druppels)
 DRUPPELSNELHEID = 2
 
-// Hoe lang duurt het om op te drogen (per druppel)?
+// Hoeveel seconden duurt het om op te drogen (per druppel)?
 DROOGTIJD = 5
 
-// Hoe nat moet een kitten worden voor het spel over is?
+// Hoe nat moet een kitten worden voor het spel voorbij is?
 DOORWEEKT = 20
 
 // Aantal pixels van links tot eerste kitten
